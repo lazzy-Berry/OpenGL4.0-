@@ -38,5 +38,33 @@ int main()
     //GLMの型をOpenGLへの入力として使う
     //glm::mat4 proj = glm::perspective(viewAngle, aspect, nearDist, farDist);
     //glUniformMatrix4fv(location, 1, GL_FALSE, &proj[0][0]);
+
+    //GLSLとOpenGLのversionを決定する
+    const GLubyte* renderer = glGetString(GL_RENDER);
+    const GLubyte* vender = glGetString(GL_VENDOR);
+    const GLubyte* version = glGetString(GL_VERSION);
+    const GLubyte* glslVersion = glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    GLint major, minor;
+    glGetIntegerv(GL_MAJOR_VERSION, &major);
+    glGetIntegerv(GL_MINOR_VERSION, &minor);
+
+   /* std::cout << "GL_RENDER: " << renderer << std::endl;
+    std::cout << "GL_VENDOR: " << vender << std::endl;
+    std::cout << "GL_VERSION: " << version << std::endl;
+    std::cout << "GL_SHADING_LANGUAGE_VERSION: " << glslVersion << std::endl;
+    std::cout << "GL_MAJOR_VERSION: " << major << std::endl;
+    std::cout << "GL_MINOR_VERSION: " << minor << std::endl;*/
+
+    ////長くなるので使う際は注意
+    //const GLubyte* extensions = glGetString(GL_EXTENSIONS);
+    ////別の方法
+    //GLint nExtensions;
+    //glGetIntegerv(GL_NUM_EXTENSIONS, &nExtensions);
+    //for (int i = 0; i < nExtensions; i++)
+    //{
+    //    printf("%s \n", glGetStringi(GL_EXTENSIONS, i));
+    //}
+
 };
 
