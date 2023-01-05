@@ -128,28 +128,82 @@ int main()
     //プログラムをOpenGLパイプラインにインストール
     glUseProgram(program);
 
+    //FragmentShaderをバインド
+    glBindFragDataLocation(program, 0, "FragColor");
+
+    //インデックス0をシェーダーの入力変数VertexPositionにBind
+    glBindAttribLocation(program, 0, "VertexPosition");
+
+    //インデックス1をシェーダーの入力変数VertexColorにバインド
+    glBindAttribLocation(program, 1, "VertexColor");
+
+    //頂点配列オブジェクトへのハンドルを保持するグローバル変数を作成
+    GLuint vaoHandle;
+
+    //初期化関数の中で、属性ごとに頂点バッファオブジェクトを作成してデータを投入
+    float positionData[] = {
+        -0.8f,-0.8f,0.0f,
+        0.8f,-0.8f,0.0f,
+        0.0f,0.8f,0.0f
+    };
+    float colorData[] = {
+        1.0f,0.0f,0.0f,
+        0.0f,1.0f,0.0f,
+        0.0f,0.0f,1.0f
+    };
+
+    //バッファオブジェクトを作成
+    GLuint vboHandle[2];
+    glGenBuffers(2, vboHandle);
+    GLuint positionBufferHandle = vboHandle[0];
+    GLuint colorBufferHandle = vboHandle[1];
+
+    //位置バッファにデータを投入
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), positionData, GL_STATIC_DRAW);
+
+    //色バッファにデータを投入
+    glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), colorData, GL_STATIC_DRAW);
+
+    //頂点配列オブジェクトの作成
+    glGenVertexArrays(1, &vaoHandle);
+    glBindVertexArray(vaoHandle);
+
+    //頂点属性配列を有効にする
+    glEnableVertexAttribArray(0); //頂点の位置
+    glEnableVertexAttribArray(1); //頂点の色
+
+    //インデックス0を位置バッファに対応づける
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
+    //インデックス1を色バッファに対応付ける
+    glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
-    float vertices[] = {
-        // positions         // colors
-        0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
-        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
-        0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
+    //float vertices[] = {
+    //    // positions         // colors
+    //    0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
+    //    -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
+    //    0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
 
-    };
-    unsigned int VBO, VAO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glBindVertexArray(VAO);
+    //};
+    //unsigned int VBO, VAO;
+    //glGenVertexArrays(1, &VAO);
+    //glGenBuffers(1, &VBO);
+    //glBindVertexArray(VAO);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    // position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    // color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+    //glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    //glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    //// position attribute
+    //glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    //glEnableVertexAttribArray(0);
+    //// color attribute
+    //glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    //glEnableVertexAttribArray(1);
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)
@@ -158,16 +212,19 @@ int main()
         glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glBindVertexArray(VAO);
+        //頂点配列オブジェクトをバインドしてレンダリングを起動
+        glBindVertexArray(vaoHandle);
         glDrawArrays(GL_TRIANGLES, 0, 3);
+        //glBindVertexArray(VAO);
+        //glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
+    //glDeleteVertexArrays(1, &VAO);
+    //glDeleteBuffers(1, &VBO);
 
     // GLFWの終了処理
     glfwTerminate();
