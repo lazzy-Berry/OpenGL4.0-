@@ -14,6 +14,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
+#include "chapter2/scene.h"
+
+
 int main()
 {
     // GLFW初期化
@@ -35,24 +38,22 @@ int main()
     glfwMakeContextCurrent(window);
     glfwSwapInterval(0);
 
+
     // GLEW初期化
     if (glewInit() != GLEW_OK)
     {
         return -1;
     }
 
-    //Shader読み込み
-    GLuint program = LoadShader("chapter1\\basic.vert", "chapter1\\basic.frag");
-    //プログラムをOpenGLパイプラインにインストール
-    glUseProgram(program);
+    Scene* scene = new Scene();
 
-    GLuint vaoHandle;
-    GLuint vboHandle[2];
 
-    //ユニフォーム用のShaderをBind
-    BindUniformShaders(&program, &vaoHandle, vboHandle);
-    //ユニフォームブロックとユニフォームバッファオブジェクトを使う
-    UseUniformBlockAndBuffer(&program);
+    scene->initScene();
+    glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+    glEnable(GL_DEPTH_TEST);
+    glClear(GL_COLOR_BUFFER_BIT);
+    scene->resize(640, 480);
+
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)
@@ -61,13 +62,14 @@ int main()
         glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        renderUseUniformBlockAndBuffer(&vaoHandle);
+        scene->render();
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
+    delete scene;
     //glDeleteVertexArrays(1, &VAO);
     //glDeleteBuffers(1, &VBO);
 

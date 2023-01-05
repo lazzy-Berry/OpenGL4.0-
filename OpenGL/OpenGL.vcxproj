@@ -149,15 +149,25 @@
   <ItemGroup>
     <ClCompile Include="chapter1\GLShader.cpp" />
     <ClCompile Include="chapter1\Glslprogram.cpp" />
+    <ClCompile Include="chapter2\glslprogram.cpp" />
+    <ClCompile Include="chapter2\scene.cpp" />
+    <ClCompile Include="chapter2\vbotorus.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.frag" />
     <None Include="chapter1\basic.vert" />
+    <None Include="chapter2\Shader\DiffuseShader.frag" />
+    <None Include="chapter2\Shader\DiffuseShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
     <ClInclude Include="chapter1\Glslprogram.h" />
+    <ClInclude Include="chapter2\defines.h" />
+    <ClInclude Include="chapter2\Drawable.h" />
+    <ClInclude Include="chapter2\glslprogram.h" />
+    <ClInclude Include="chapter2\scene.h" />
+    <ClInclude Include="chapter2\vbotorus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
