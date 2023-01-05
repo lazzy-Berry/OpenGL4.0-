@@ -182,28 +182,25 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
 
-    // set up vertex data (and buffer(s)) and configure vertex attributes
-    // ------------------------------------------------------------------
-    //float vertices[] = {
-    //    // positions         // colors
-    //    0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
-    //    -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // bottom left
-    //    0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // top 
+    //アクティブな属性の和人、それらの名前の最大長を取り出す
+    GLint maxLength, nAttribs;
+    glGetProgramiv(program, GL_ACTIVE_ATTRIBUTES, &nAttribs);
+    glGetProgramiv(program, GL_ACTIVE_ATTRIBUTE_MAX_LENGTH, &maxLength);
+    //個々の属性名を保持するバッファを割り当てる
+    GLchar* name = (GLchar*)malloc(maxLength);
 
-    //};
-    //unsigned int VBO, VAO;
-    //glGenVertexArrays(1, &VAO);
-    //glGenBuffers(1, &VBO);
-    //glBindVertexArray(VAO);
-
-    //glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    //glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    //// position attribute
-    //glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    //glEnableVertexAttribArray(0);
-    //// color attribute
-    //glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    //glEnableVertexAttribArray(1);
+    //個々のアクティブな属性についての情報を取得してプリントする
+    GLint written, size, location;
+    GLenum type;
+    printf("　インデックス  |  名前\n");
+    printf("-----------------------------\n");
+    for (int i = 0; i < nAttribs; i++)
+    {
+        glGetActiveAttrib(program, i, maxLength, &written, &size, &type, name);
+        location = glGetAttribLocation(program, name);
+        printf(" %-5d    |  %s\n", location, name);
+    }
+    free(name);
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)
@@ -215,8 +212,6 @@ int main()
         //頂点配列オブジェクトをバインドしてレンダリングを起動
         glBindVertexArray(vaoHandle);
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        //glBindVertexArray(VAO);
-        //glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);
