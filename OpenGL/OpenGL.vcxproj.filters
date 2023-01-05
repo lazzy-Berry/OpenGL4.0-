@@ -16,6 +16,12 @@
     <Filter Include="ソース ファイル\chapter1">
       <UniqueIdentifier>{bdb5044b-2527-4d11-ba00-180008979d22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter2">
+      <UniqueIdentifier>{134291a2-483a-4ffa-835c-4361c08ad475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter2\Shader">
+      <UniqueIdentifier>{3bdeeedb-509d-4f89-add1-f10f0753483b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -23,6 +29,15 @@
     </ClCompile>
     <ClCompile Include="chapter1\GLShader.cpp">
       <Filter>ソース ファイル\chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter2\glslprogram.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter2\scene.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter2\vbotorus.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
     </ClCompile>
     <ClCompile Include="chapter1\Glslprogram.cpp">
       <Filter>ソース ファイル\chapter1</Filter>
@@ -35,10 +50,31 @@
     <None Include="chapter1\basic.frag">
       <Filter>ソース ファイル\chapter1</Filter>
     </None>
+    <None Include="chapter2\Shader\DiffuseShader.vert">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\DiffuseShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
       <Filter>ソース ファイル\chapter1</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\glslprogram.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\scene.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\Drawable.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\vbotorus.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\defines.h">
+      <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
     <ClInclude Include="chapter1\Glslprogram.h">
       <Filter>ソース ファイル\chapter1</Filter>

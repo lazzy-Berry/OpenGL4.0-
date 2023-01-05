@@ -8,7 +8,6 @@ using std::ios;
 using std::ostringstream;
 
 #include <sys/stat.h>
-#include "..\chapter2\glslprogram.h"
 
 GLSLProgram::GLSLProgram() : handle(0), linked(false) {}
 
@@ -57,7 +56,7 @@ bool GLSLProgram::compileShaderFromString(const string& source, GLSLShader::GLSL
 			return false;
 		}
 	}
-	
+
 	GLuint shaderHandle = 0;
 	switch (type) {
 	case GLSLShader::VERTEX:
@@ -151,7 +150,7 @@ string GLSLProgram::log()
 	return logString;
 }
 
-int GLSLProgram::getHandle()
+GLuint GLSLProgram::getHandle()
 {
 	return handle;
 }
@@ -284,7 +283,7 @@ void GLSLProgram::printActiveAttribs() {
 
 int GLSLProgram::getUniformLocation(const char* name)
 {
-    return glGetUniformLocation(handle, name);
+	return glGetUniformLocation(handle, name);
 }
 
 bool GLSLProgram::fileExists(const string& fileName)
@@ -296,4 +295,32 @@ bool GLSLProgram::fileExists(const string& fileName)
 	return 0 == ret;
 }
 
+bool GLSLProgram::validate()
+{
+	if (!isLinked()) return false;
 
+	GLint status;
+	glValidateProgram(handle);
+	glGetProgramiv(handle, GL_VALIDATE_STATUS, &status);
+
+	if (GL_FALSE == status) {
+		// Store log and return false
+		int length = 0;
+		logString = "";
+
+		glGetProgramiv(handle, GL_INFO_LOG_LENGTH, &length);
+
+		if (length > 0) {
+			char* c_log = new char[length];
+			int written = 0;
+			glGetProgramInfoLog(handle, length, &written, c_log);
+			logString = c_log;
+			delete[] c_log;
+		}
+
+		return false;
+	}
+	else {
+		return true;
+	}
+}
