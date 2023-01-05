@@ -101,6 +101,58 @@ GLuint LoadShader(const char* vertex_path, const char* fragment_path)
     return program;
 }
 
+void BindShaders(GLuint* programHandle, GLuint* vaoHandle, GLuint* vboHandle)
+{
+    //FragmentShaderをバインド
+    glBindFragDataLocation(*programHandle, 0, "FragColor");
+
+    //インデックス0をシェーダーの入力変数VertexPositionにBind
+    glBindAttribLocation(*programHandle, 0, "VertexPosition");
+
+    //インデックス1をシェーダーの入力変数VertexColorにバインド
+    glBindAttribLocation(*programHandle, 1, "VertexColor");
+
+    //初期化関数の中で、属性ごとに頂点バッファオブジェクトを作成してデータを投入
+    float positionData[] = {
+        -0.8f,-0.8f,0.0f,
+        0.8f,-0.8f,0.0f,
+        0.0f,0.8f,0.0f
+    };
+    float colorData[] = {
+        1.0f,0.0f,0.0f,
+        0.0f,1.0f,0.0f,
+        0.0f,0.0f,1.0f
+    };
+
+    glGenBuffers(2, vboHandle);
+    GLuint positionBufferHandle = vboHandle[0];
+    GLuint colorBufferHandle = vboHandle[1];
+
+    //位置バッファにデータを投入
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), positionData, GL_STATIC_DRAW);
+
+    //色バッファにデータを投入
+    glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), colorData, GL_STATIC_DRAW);
+
+    //頂点配列オブジェクトの作成
+    glGenVertexArrays(1, vaoHandle);
+    glBindVertexArray(*vaoHandle);
+
+    //頂点属性配列を有効にする
+    glEnableVertexAttribArray(0); //頂点の位置
+    glEnableVertexAttribArray(1); //頂点の色
+
+    //インデックス0を位置バッファに対応づける
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
+    //インデックス1を色バッファに対応付ける
+    glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+}
+
 void SendRotationUniform(GLuint* programHandle, float angle, GLuint* vaoHandle)
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -114,4 +166,27 @@ void SendRotationUniform(GLuint* programHandle, float angle, GLuint* vaoHandle)
     }
     glBindVertexArray(*vaoHandle);
     glDrawArrays(GL_TRIANGLES, 0, 3);
+}
+
+void PrintActibAttribs(GLuint* programHandle)
+{
+    //アクティブな属性の和人、それらの名前の最大長を取り出す
+    GLint maxLength, nAttribs;
+    glGetProgramiv(*programHandle, GL_ACTIVE_ATTRIBUTES, &nAttribs);
+    glGetProgramiv(*programHandle, GL_ACTIVE_ATTRIBUTE_MAX_LENGTH, &maxLength);
+    //個々の属性名を保持するバッファを割り当てる
+    GLchar* name = (GLchar*)malloc(maxLength);
+
+    //個々のアクティブな属性についての情報を取得してプリントする
+    GLint written, size, location;
+    GLenum type;
+    printf("　インデックス  |  名前\n");
+    printf("-----------------------------\n");
+    for (int i = 0; i < nAttribs; i++)
+    {
+        glGetActiveAttrib(*programHandle, i, maxLength, &written, &size, &type, name);
+        location = glGetAttribLocation(*programHandle, name);
+        printf(" %-5d    |  %s\n", location, name);
+    }
+    free(name);
 }
