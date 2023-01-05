@@ -19,5 +19,9 @@ void SendRotationUniform(GLuint* programHandle, float angle, GLuint* vaoHandle);
 //個々のアクティブな属性についての情報を取得してプリントする
 void PrintActibAttribs(GLuint* programHandle);
 
+//アクティブなユニフォーム変数のリストを得る
+void PrintActiveUniformAttribs(GLuint* programHandle);
+
+
 
 #endif

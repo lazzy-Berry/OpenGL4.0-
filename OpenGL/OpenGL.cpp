@@ -60,6 +60,10 @@ int main()
     //個々のアクティブな属性についての情報を取得してプリントする
     PrintActibAttribs(&program);
 
+    //アクティブなユニフォーム変数のリストを得る
+    PrintActiveUniformAttribs(&program);
+
+
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)
     {

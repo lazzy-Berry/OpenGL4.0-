@@ -190,3 +190,29 @@ void PrintActibAttribs(GLuint* programHandle)
     }
     free(name);
 }
+
+void PrintActiveUniformAttribs(GLuint* programHandle)
+{
+    //すべてのアクティブなウニフォーム変数の名前の最大長とアクティブなユニフォーム変数の数を取り出す
+    GLint nUniforms, maxLen;
+
+    glGetProgramiv(*programHandle, GL_ACTIVE_UNIFORM_MAX_LENGTH, &maxLen);
+    glGetProgramiv(*programHandle, GL_ACTIVE_UNIFORMS, &nUniforms);
+
+    //各ユニフォーム変数の名前を格納するスペースを割り当てる
+    GLchar* name = (GLchar*)malloc(maxLen);
+
+    //個々のアクティブなユニフォーム変数の情報を取り出し出力
+    GLint size, location;
+    GLsizei written;
+    GLenum type;
+    printf(" Location  |  Name \n");
+    printf("---------------------------\n");
+    for (int i = 0; i < nUniforms; ++i)
+    {
+        glGetActiveUniform(*programHandle, i, maxLen, &written, &size, &type, name);
+        location = glGetUniformLocation(*programHandle, name);
+        printf(" %-8d   | %s\n", location, name);
+    }
+    free(name);
+}
