@@ -24,6 +24,9 @@
     <ClCompile Include="chapter1\GLShader.cpp">
       <Filter>ソース ファイル\chapter1</Filter>
     </ClCompile>
+    <ClCompile Include="chapter1\Glslprogram.cpp">
+      <Filter>ソース ファイル\chapter1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
@@ -35,6 +38,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
+      <Filter>ソース ファイル\chapter1</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter1\Glslprogram.h">
       <Filter>ソース ファイル\chapter1</Filter>
     </ClInclude>
   </ItemGroup>

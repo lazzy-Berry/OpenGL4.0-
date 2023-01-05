@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="chapter1\GLShader.cpp" />
+    <ClCompile Include="chapter1\Glslprogram.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
+    <ClInclude Include="chapter1\Glslprogram.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
