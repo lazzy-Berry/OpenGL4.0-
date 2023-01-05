@@ -21,10 +21,21 @@
     <ClCompile Include="OpenGL.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="chapter1\GLShader.cpp">
+      <Filter>ソース ファイル\chapter1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
       <Filter>ソース ファイル\chapter1</Filter>
     </None>
+    <None Include="chapter1\basic.frag">
+      <Filter>ソース ファイル\chapter1</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chapter1\GLShader.hpp">
+      <Filter>ソース ファイル\chapter1</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

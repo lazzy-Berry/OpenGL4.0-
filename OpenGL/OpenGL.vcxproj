@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -97,7 +97,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,7 +127,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,10 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="chapter1\GLShader.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="chapter1\basic.frag" />
     <None Include="chapter1\basic.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chapter1\GLShader.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
