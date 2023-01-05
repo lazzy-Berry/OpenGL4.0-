@@ -216,3 +216,99 @@ void PrintActiveUniformAttribs(GLuint* programHandle)
     }
     free(name);
 }
+
+void BindUniformShaders(GLuint* programHandle, GLuint* vaoHandle, GLuint* vboHandle)
+{
+
+    //初期化関数の中で、属性ごとに頂点バッファオブジェクトを作成してデータを投入
+    float positionData[] = {
+        -0.8f, -0.8f, 0.0f,
+         0.8f, -0.8f, 0.0f,
+         0.8f,  0.8f, 0.0f,
+         -0.8f, -0.8f, 0.0f,
+          0.8f, 0.8f, 0.0f,
+          -0.8f, 0.8f, 0.0f
+    };
+    float tcData[] = {
+        0.0f, 0.0f,
+        1.0f, 0.0f,
+        1.0f, 1.0f,
+        0.0f, 0.0f,
+        1.0f, 1.0f,
+        0.0f, 1.0f
+    };
+
+    glGenBuffers(2, vboHandle);
+    GLuint positionBufferHandle = vboHandle[0];
+    GLuint tcBufferHandle = vboHandle[1];
+
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(float), positionData, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ARRAY_BUFFER, tcBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 12 * sizeof(float), tcData, GL_STATIC_DRAW);
+
+    //頂点配列オブジェクトの作成
+    glGenVertexArrays(1, vaoHandle);
+    glBindVertexArray(*vaoHandle);
+
+    //頂点属性配列を有効にする
+    glEnableVertexAttribArray(0); 
+    glEnableVertexAttribArray(1); 
+
+    //インデックス0を位置バッファに対応づける
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
+    //インデックス1を色バッファに対応付ける
+    glBindBuffer(GL_ARRAY_BUFFER, tcBufferHandle);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, (GLubyte*)NULL);
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+
+void UseUniformBlockAndBuffer(GLuint* programHandle)
+{
+    //ユニフォームブロックのインデックスを取得
+    GLuint blockIndex = glGetUniformBlockIndex(*programHandle, "BlobSettings");
+
+    //ユニフォームブロックのデータが入るバッファ用のスペースを割り当てる
+    GLint blockSize;
+    glGetActiveUniformBlockiv(*programHandle, blockIndex, GL_UNIFORM_BLOCK_DATA_SIZE, &blockSize);
+    GLubyte* blockBuffer = (GLubyte*)malloc(blockSize);
+
+    //各変数のブロック中のオブセットを問い合わせる
+    const GLchar* names[] = { "InnerColor", "OuterColor",
+        "RadiusInner", "RadiusOuter" };
+    GLuint indices[4];
+    glGetUniformIndices(*programHandle, 4, names, indices);
+
+    GLint offset[4];
+    glGetActiveUniformsiv(*programHandle, 4, indices, GL_UNIFORM_OFFSET, offset);
+
+    //データをバッファ中に適切なオフセットで配置
+    GLfloat outerColor[] = { 0.0f,0.0f,0.0f,0.0f };
+    GLfloat innerColor[] = { 1.0f,1.0f,0.75f,1.0f };
+    GLfloat innerRadius = 0.25f, outerRadius = 0.45f;
+
+    memcpy(blockBuffer + offset[0], innerColor, 4 * sizeof(GLfloat));
+    memcpy(blockBuffer + offset[1], outerColor, 4 * sizeof(GLfloat));
+    memcpy(blockBuffer + offset[2], &innerRadius, 4 * sizeof(GLfloat));
+    memcpy(blockBuffer + offset[3], &outerRadius, 4 * sizeof(GLfloat));
+
+    //OpenGLバッファオブジェクトを作成しそこにデータをコピー
+    GLuint uboHandle;
+    glGenBuffers(1, &uboHandle);
+    glBindBuffer(GL_UNIFORM_BUFFER, uboHandle);
+    glBufferData(GL_UNIFORM_BUFFER, blockSize, blockBuffer, GL_DYNAMIC_DRAW);
+
+    //バッファオブジェクトをユニフォームにバインド
+    glBindBufferBase(GL_UNIFORM_BUFFER, blockIndex, uboHandle);
+}
+
+void renderUseUniformBlockAndBuffer(GLuint* vaoHandle)
+{
+    glBindVertexArray(*vaoHandle);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+}

@@ -22,6 +22,13 @@ void PrintActibAttribs(GLuint* programHandle);
 //アクティブなユニフォーム変数のリストを得る
 void PrintActiveUniformAttribs(GLuint* programHandle);
 
+//シェーダをバインドする
+//ユニフォーム用
+void BindUniformShaders(GLuint* programHandle, GLuint* vaoHandle, GLuint* vboHandle);
+
+//ユニフォームブロックとユニフォームバッファオブジェクトを使う
+void UseUniformBlockAndBuffer(GLuint* programHandle);
+void renderUseUniformBlockAndBuffer(GLuint* vaoHandle);
 
 
 #endif

@@ -46,23 +46,13 @@ int main()
     //プログラムをOpenGLパイプラインにインストール
     glUseProgram(program);
 
-
-    //頂点配列オブジェクトへのハンドルを保持するグローバル変数を作成
     GLuint vaoHandle;
-
-    //バッファオブジェクトを作成
     GLuint vboHandle[2];
 
-    //Shaderをバインド
-    BindShaders(&program, &vaoHandle, vboHandle);
-    
-
-    //個々のアクティブな属性についての情報を取得してプリントする
-    PrintActibAttribs(&program);
-
-    //アクティブなユニフォーム変数のリストを得る
-    PrintActiveUniformAttribs(&program);
-
+    //ユニフォーム用のShaderをBind
+    BindUniformShaders(&program, &vaoHandle, vboHandle);
+    //ユニフォームブロックとユニフォームバッファオブジェクトを使う
+    UseUniformBlockAndBuffer(&program);
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)
@@ -71,12 +61,7 @@ int main()
         glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        //頂点配列オブジェクトをバインドしてレンダリングを起動
-        //glBindVertexArray(vaoHandle);
-        //glDrawArrays(GL_TRIANGLES, 0, 3);
-        
-        //回転した三角形を描画
-        SendRotationUniform(&program, 45.0f, &vaoHandle);
+        renderUseUniformBlockAndBuffer(&vaoHandle);
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);

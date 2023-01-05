@@ -1,16 +1,13 @@
 #version 400
 
-//レイアウト修飾子
-//属性インデックスを定義することで、glBindAttribLocationを呼び出す必要がなくなる
+
 layout (location = 0) in vec3 VertexPosition;
-layout (location = 1) in vec3 VertexColor;
+layout (location = 1) in vec3 VertexTexCoord;
 
-out vec3 Color;
-
-uniform mat4 RotationMatrix;
+out vec3 TexCoord;
 
 void main()
 {
-    Color = VertexColor;
-    gl_Position = RotationMatrix * vec4(VertexPosition, 1.0);
+    TexCoord = VertexTexCoord;
+    gl_Position = vec4(VertexPosition, 1.0);
 }
