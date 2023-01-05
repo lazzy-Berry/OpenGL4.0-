@@ -210,8 +210,11 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         //頂点配列オブジェクトをバインドしてレンダリングを起動
-        glBindVertexArray(vaoHandle);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        //glBindVertexArray(vaoHandle);
+        //glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        //回転した三角形を描画
+        SendRotationUniform(&program, 45.0f, &vaoHandle);
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);

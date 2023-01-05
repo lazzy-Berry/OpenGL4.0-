@@ -1,5 +1,11 @@
 #include "GLShader.hpp"
 
+#include <glm/glm.hpp>
+using glm::mat4;
+using glm::vec3;
+
+#include <glm/gtc/matrix_transform.hpp>
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -93,4 +99,19 @@ GLuint LoadShader(const char* vertex_path, const char* fragment_path)
     glDeleteShader(fragShader);
 
     return program;
+}
+
+void SendRotationUniform(GLuint* programHandle, float angle, GLuint* vaoHandle)
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    mat4 rotationMatrix = glm::rotate(mat4(1.0f), angle, vec3(0.0f, 0.0f, 1.0f));
+        
+    GLuint location = glGetUniformLocation(*programHandle, "RotationMatrix");
+
+    if (location >= 0)
+    {
+        glUniformMatrix4fv(location, 1, GL_FALSE, &rotationMatrix[0][0]);
+    }
+    glBindVertexArray(*vaoHandle);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }
