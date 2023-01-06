@@ -42,6 +42,9 @@
     <ClCompile Include="chapter1\Glslprogram.cpp">
       <Filter>ソース ファイル\chapter1</Filter>
     </ClCompile>
+    <ClCompile Include="chapter2\ADSScene.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
@@ -54,6 +57,12 @@
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
     <None Include="chapter2\Shader\DiffuseShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\ADSShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\ADSShader.vert">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
   </ItemGroup>
@@ -78,6 +87,9 @@
     </ClInclude>
     <ClInclude Include="chapter1\Glslprogram.h">
       <Filter>ソース ファイル\chapter1</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\ADSScene.h">
+      <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

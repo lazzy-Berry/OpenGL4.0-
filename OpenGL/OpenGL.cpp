@@ -15,7 +15,7 @@
 #include <glm/gtx/transform2.hpp>
 
 #include "chapter2/scene.h"
-
+#include "chapter2/ADSScene.h"
 
 int main()
 {
@@ -45,8 +45,11 @@ int main()
         return -1;
     }
 
-    Scene* scene = new Scene();
+    //DIffuse
+    //Scene* scene = new Scene();
 
+    //ADS
+    ADSScene* scene = new ADSScene();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
