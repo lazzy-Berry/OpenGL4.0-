@@ -162,6 +162,8 @@
     <None Include="chapter2\Shader\ADSShader.vert" />
     <None Include="chapter2\Shader\DiffuseShader.frag" />
     <None Include="chapter2\Shader\DiffuseShader.vert" />
+    <None Include="chapter2\Shader\FunctionADSShader.frag" />
+    <None Include="chapter2\Shader\FunctionADSShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />

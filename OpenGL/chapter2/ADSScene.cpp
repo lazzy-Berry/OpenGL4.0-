@@ -21,13 +21,13 @@ void ADSScene::setMatrices()
 
 void ADSScene::compileAndLinkShader()
 {
-    if (!prog.compileShaderFromFile("chapter2\\Shader\\ADSShader.vert", GLSLShader::VERTEX))
+    if (!prog.compileShaderFromFile("chapter2\\Shader\\FunctionADSShader.vert", GLSLShader::VERTEX))
     {
         printf("Vertex shader failed to compile!\n%s",
             prog.log().c_str());
         exit(1);
     }
-    if (!prog.compileShaderFromFile("chapter2\\Shader\\ADSShader.frag", GLSLShader::FRAGMENT))
+    if (!prog.compileShaderFromFile("chapter2\\Shader\\FunctionADSShader.frag", GLSLShader::FRAGMENT))
     {
         printf("Fragment shader failed to compile!\n%s",
             prog.log().c_str());

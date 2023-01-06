@@ -65,6 +65,12 @@
     <None Include="chapter2\Shader\ADSShader.vert">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
+    <None Include="chapter2\Shader\FunctionADSShader.vert">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\FunctionADSShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
