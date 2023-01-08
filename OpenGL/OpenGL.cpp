@@ -18,6 +18,7 @@
 #include "chapter2/ADSScene.h"
 #include "chapter2/SceneTwoSide.h"
 #include "chapter2/FlatScene.h"
+#include "chapter2/SceneSubRoutine.h"
 
 int main()
 {
@@ -57,7 +58,10 @@ int main()
     //SceneTwoSide* scene = new SceneTwoSide();
 
     //FlatShading
-    FlatScene* scene = new FlatScene();
+    //FlatScene* scene = new FlatScene();
+
+    //サブルーチン
+    SceneSubRoutine* scene = new SceneSubRoutine();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

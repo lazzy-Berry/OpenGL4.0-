@@ -153,6 +153,7 @@
     <ClCompile Include="chapter2\FlatScene.cpp" />
     <ClCompile Include="chapter2\glslprogram.cpp" />
     <ClCompile Include="chapter2\scene.cpp" />
+    <ClCompile Include="chapter2\SceneSubRoutine.cpp" />
     <ClCompile Include="chapter2\SceneTwoSide.cpp" />
     <ClCompile Include="chapter2\teaPot.cpp" />
     <ClCompile Include="chapter2\vbotorus.cpp" />
@@ -169,6 +170,8 @@
     <None Include="chapter2\Shader\FlatShader.vert" />
     <None Include="chapter2\Shader\FunctionADSShader.frag" />
     <None Include="chapter2\Shader\FunctionADSShader.vert" />
+    <None Include="chapter2\Shader\SubRoutineShader.frag" />
+    <None Include="chapter2\Shader\SubRoutineShader.vert" />
     <None Include="chapter2\Shader\TwoSideShader.frag" />
     <None Include="chapter2\Shader\TwoSideShader.vert" />
   </ItemGroup>
@@ -181,6 +184,7 @@
     <ClInclude Include="chapter2\FlatScene.h" />
     <ClInclude Include="chapter2\glslprogram.h" />
     <ClInclude Include="chapter2\scene.h" />
+    <ClInclude Include="chapter2\SceneSubRoutine.h" />
     <ClInclude Include="chapter2\SceneTwoSide.h" />
     <ClInclude Include="chapter2\teaPot.h" />
     <ClInclude Include="chapter2\teapotdata.h" />
