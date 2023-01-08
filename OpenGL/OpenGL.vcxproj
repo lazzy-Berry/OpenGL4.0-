@@ -150,6 +150,7 @@
     <ClCompile Include="chapter1\GLShader.cpp" />
     <ClCompile Include="chapter1\Glslprogram.cpp" />
     <ClCompile Include="chapter2\ADSScene.cpp" />
+    <ClCompile Include="chapter2\FlatScene.cpp" />
     <ClCompile Include="chapter2\glslprogram.cpp" />
     <ClCompile Include="chapter2\scene.cpp" />
     <ClCompile Include="chapter2\SceneTwoSide.cpp" />
@@ -164,6 +165,8 @@
     <None Include="chapter2\Shader\ADSShader.vert" />
     <None Include="chapter2\Shader\DiffuseShader.frag" />
     <None Include="chapter2\Shader\DiffuseShader.vert" />
+    <None Include="chapter2\Shader\FlatShader.frag" />
+    <None Include="chapter2\Shader\FlatShader.vert" />
     <None Include="chapter2\Shader\FunctionADSShader.frag" />
     <None Include="chapter2\Shader\FunctionADSShader.vert" />
     <None Include="chapter2\Shader\TwoSideShader.frag" />
@@ -175,6 +178,7 @@
     <ClInclude Include="chapter2\ADSScene.h" />
     <ClInclude Include="chapter2\defines.h" />
     <ClInclude Include="chapter2\Drawable.h" />
+    <ClInclude Include="chapter2\FlatScene.h" />
     <ClInclude Include="chapter2\glslprogram.h" />
     <ClInclude Include="chapter2\scene.h" />
     <ClInclude Include="chapter2\SceneTwoSide.h" />

@@ -17,7 +17,7 @@
 #include "chapter2/scene.h"
 #include "chapter2/ADSScene.h"
 #include "chapter2/SceneTwoSide.h"
-
+#include "chapter2/FlatScene.h"
 
 int main()
 {
@@ -54,7 +54,10 @@ int main()
     //ADSScene* scene = new ADSScene();
 
     //両面シェーディング
-    SceneTwoSide* scene = new SceneTwoSide();
+    //SceneTwoSide* scene = new SceneTwoSide();
+
+    //FlatShading
+    FlatScene* scene = new FlatScene();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

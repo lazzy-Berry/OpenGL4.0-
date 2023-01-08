@@ -51,6 +51,9 @@
     <ClCompile Include="chapter2\SceneTwoSide.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="chapter2\FlatScene.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
@@ -81,6 +84,12 @@
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
     <None Include="chapter2\Shader\TwoSideShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\FlatShader.vert">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\FlatShader.frag">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
   </ItemGroup>
@@ -116,6 +125,9 @@
       <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
     <ClInclude Include="chapter2\SceneTwoSide.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\FlatScene.h">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
   </ItemGroup>
