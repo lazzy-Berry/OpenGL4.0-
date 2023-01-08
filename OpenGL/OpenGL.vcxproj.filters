@@ -57,6 +57,9 @@
     <ClCompile Include="chapter2\SceneSubRoutine.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="chapter2\DiscardScene.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
@@ -101,6 +104,12 @@
     <None Include="chapter2\Shader\SubRoutineShader.frag">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
+    <None Include="chapter2\Shader\DiscardShader.vert">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\DiscardShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -140,6 +149,9 @@
       <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
     <ClInclude Include="chapter2\SceneSubRoutine.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\DiscardScene.h">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
   </ItemGroup>

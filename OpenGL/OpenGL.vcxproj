@@ -150,6 +150,7 @@
     <ClCompile Include="chapter1\GLShader.cpp" />
     <ClCompile Include="chapter1\Glslprogram.cpp" />
     <ClCompile Include="chapter2\ADSScene.cpp" />
+    <ClCompile Include="chapter2\DiscardScene.cpp" />
     <ClCompile Include="chapter2\FlatScene.cpp" />
     <ClCompile Include="chapter2\glslprogram.cpp" />
     <ClCompile Include="chapter2\scene.cpp" />
@@ -166,6 +167,8 @@
     <None Include="chapter2\Shader\ADSShader.vert" />
     <None Include="chapter2\Shader\DiffuseShader.frag" />
     <None Include="chapter2\Shader\DiffuseShader.vert" />
+    <None Include="chapter2\Shader\DiscardShader.frag" />
+    <None Include="chapter2\Shader\DiscardShader.vert" />
     <None Include="chapter2\Shader\FlatShader.frag" />
     <None Include="chapter2\Shader\FlatShader.vert" />
     <None Include="chapter2\Shader\FunctionADSShader.frag" />
@@ -180,6 +183,7 @@
     <ClInclude Include="chapter1\Glslprogram.h" />
     <ClInclude Include="chapter2\ADSScene.h" />
     <ClInclude Include="chapter2\defines.h" />
+    <ClInclude Include="chapter2\DiscardScene.h" />
     <ClInclude Include="chapter2\Drawable.h" />
     <ClInclude Include="chapter2\FlatScene.h" />
     <ClInclude Include="chapter2\glslprogram.h" />

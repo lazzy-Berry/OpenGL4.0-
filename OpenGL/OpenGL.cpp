@@ -19,6 +19,7 @@
 #include "chapter2/SceneTwoSide.h"
 #include "chapter2/FlatScene.h"
 #include "chapter2/SceneSubRoutine.h"
+#include "chapter2/DiscardScene.h"
 
 int main()
 {
@@ -61,7 +62,10 @@ int main()
     //FlatScene* scene = new FlatScene();
 
     //サブルーチン
-    SceneSubRoutine* scene = new SceneSubRoutine();
+    //SceneSubRoutine* scene = new SceneSubRoutine();
+    
+    //穴の開いた外見
+    SceneDiscard* scene = new SceneDiscard();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
