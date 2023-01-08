@@ -16,6 +16,8 @@
 
 #include "chapter2/scene.h"
 #include "chapter2/ADSScene.h"
+#include "chapter2/SceneTwoSide.h"
+
 
 int main()
 {
@@ -25,7 +27,7 @@ int main()
         return -1;
     }
     // ウィンドウ生成
-    GLFWwindow* window = glfwCreateWindow(640, 480, "OpenGL Test", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 640, "OpenGL Test", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -49,13 +51,16 @@ int main()
     //Scene* scene = new Scene();
 
     //ADS
-    ADSScene* scene = new ADSScene();
+    //ADSScene* scene = new ADSScene();
+
+    //両面シェーディング
+    SceneTwoSide* scene = new SceneTwoSide();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT);
-    scene->resize(640, 480);
+    scene->resize(1280, 640);
 
 
     // フレームループ

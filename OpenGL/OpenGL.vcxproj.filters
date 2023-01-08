@@ -45,6 +45,12 @@
     <ClCompile Include="chapter2\ADSScene.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="chapter2\teaPot.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter2\SceneTwoSide.cpp">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="chapter1\basic.vert">
@@ -71,6 +77,12 @@
     <None Include="chapter2\Shader\FunctionADSShader.frag">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
+    <None Include="chapter2\Shader\TwoSideShader.vert">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
+    <None Include="chapter2\Shader\TwoSideShader.frag">
+      <Filter>ソース ファイル\chapter2\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -95,6 +107,15 @@
       <Filter>ソース ファイル\chapter1</Filter>
     </ClInclude>
     <ClInclude Include="chapter2\ADSScene.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\teaPot.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\teapotdata.h">
+      <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter2\SceneTwoSide.h">
       <Filter>ソース ファイル\chapter2</Filter>
     </ClInclude>
   </ItemGroup>

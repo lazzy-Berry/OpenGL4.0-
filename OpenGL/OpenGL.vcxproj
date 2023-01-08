@@ -152,6 +152,8 @@
     <ClCompile Include="chapter2\ADSScene.cpp" />
     <ClCompile Include="chapter2\glslprogram.cpp" />
     <ClCompile Include="chapter2\scene.cpp" />
+    <ClCompile Include="chapter2\SceneTwoSide.cpp" />
+    <ClCompile Include="chapter2\teaPot.cpp" />
     <ClCompile Include="chapter2\vbotorus.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -164,6 +166,8 @@
     <None Include="chapter2\Shader\DiffuseShader.vert" />
     <None Include="chapter2\Shader\FunctionADSShader.frag" />
     <None Include="chapter2\Shader\FunctionADSShader.vert" />
+    <None Include="chapter2\Shader\TwoSideShader.frag" />
+    <None Include="chapter2\Shader\TwoSideShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -173,6 +177,9 @@
     <ClInclude Include="chapter2\Drawable.h" />
     <ClInclude Include="chapter2\glslprogram.h" />
     <ClInclude Include="chapter2\scene.h" />
+    <ClInclude Include="chapter2\SceneTwoSide.h" />
+    <ClInclude Include="chapter2\teaPot.h" />
+    <ClInclude Include="chapter2\teapotdata.h" />
     <ClInclude Include="chapter2\vbotorus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
