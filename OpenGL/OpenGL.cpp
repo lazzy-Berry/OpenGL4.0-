@@ -15,6 +15,7 @@
 #include <glm/gtx/transform2.hpp>
 
 #include "chapter2/scene.h"
+
 #include "chapter2/ADSScene.h"
 #include "chapter2/SceneTwoSide.h"
 #include "chapter2/FlatScene.h"
@@ -72,7 +73,6 @@ int main()
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT);
     scene->resize(1280, 640);
-
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)

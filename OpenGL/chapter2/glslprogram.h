@@ -44,6 +44,7 @@ public:
     string log();
 
     GLuint getHandle();
+
     bool   isLinked();
 
     void   bindAttribLocation(GLuint location, const char* name);

@@ -309,7 +309,7 @@ bool GLSLProgram::validate()
 		logString = "";
 
 		glGetProgramiv(handle, GL_INFO_LOG_LENGTH, &length);
-	
+
 		if (length > 0) {
 			char* c_log = new char[length];
 			int written = 0;
