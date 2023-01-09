@@ -158,6 +158,8 @@
     <ClCompile Include="chapter2\SceneTwoSide.cpp" />
     <ClCompile Include="chapter2\teaPot.cpp" />
     <ClCompile Include="chapter2\vbotorus.cpp" />
+    <ClCompile Include="chapter3\Mesh\VBOPlane.cpp" />
+    <ClCompile Include="chapter3\multiLight\SceneMultiLight.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +179,8 @@
     <None Include="chapter2\Shader\SubRoutineShader.vert" />
     <None Include="chapter2\Shader\TwoSideShader.frag" />
     <None Include="chapter2\Shader\TwoSideShader.vert" />
+    <None Include="chapter3\multiLight\Shader\MultiLightShader.frag" />
+    <None Include="chapter3\multiLight\Shader\MultiLightShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -193,6 +197,8 @@
     <ClInclude Include="chapter2\teaPot.h" />
     <ClInclude Include="chapter2\teapotdata.h" />
     <ClInclude Include="chapter2\vbotorus.h" />
+    <ClInclude Include="chapter3\Mesh\VBOPlane.h" />
+    <ClInclude Include="chapter3\multiLight\SceneMultiLight.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

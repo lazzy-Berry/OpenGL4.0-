@@ -22,6 +22,18 @@
     <Filter Include="ソース ファイル\chapter2\Shader">
       <UniqueIdentifier>{3bdeeedb-509d-4f89-add1-f10f0753483b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3">
+      <UniqueIdentifier>{45ce5799-c442-42f0-8197-2b7b9fe497ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\multiLight">
+      <UniqueIdentifier>{5170f4d3-9b80-45e6-beb6-d45141f93904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\multiLight\Shader">
+      <UniqueIdentifier>{7ff363ca-fbd0-4875-b3d2-fe707fc15f64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\Mesh">
+      <UniqueIdentifier>{07cd492f-458c-4231-bc1c-c7cf5113db85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -59,6 +71,12 @@
     </ClCompile>
     <ClCompile Include="chapter2\DiscardScene.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\multiLight\SceneMultiLight.cpp">
+      <Filter>ソース ファイル\chapter3\multiLight</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\Mesh\VBOPlane.cpp">
+      <Filter>ソース ファイル\chapter3\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +128,12 @@
     <None Include="chapter2\Shader\DiscardShader.frag">
       <Filter>ソース ファイル\chapter2\Shader</Filter>
     </None>
+    <None Include="chapter3\multiLight\Shader\MultiLightShader.frag">
+      <Filter>ソース ファイル\chapter3\multiLight\Shader</Filter>
+    </None>
+    <None Include="chapter3\multiLight\Shader\MultiLightShader.vert">
+      <Filter>ソース ファイル\chapter3\multiLight\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -153,6 +177,12 @@
     </ClInclude>
     <ClInclude Include="chapter2\DiscardScene.h">
       <Filter>ソース ファイル\chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\multiLight\SceneMultiLight.h">
+      <Filter>ソース ファイル\chapter3\multiLight</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\Mesh\VBOPlane.h">
+      <Filter>ソース ファイル\chapter3\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

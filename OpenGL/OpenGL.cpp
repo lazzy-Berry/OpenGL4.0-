@@ -21,6 +21,7 @@
 #include "chapter2/FlatScene.h"
 #include "chapter2/SceneSubRoutine.h"
 #include "chapter2/DiscardScene.h"
+#include "chapter3/multiLight/SceneMultiLight.h"
 
 int main()
 {
@@ -66,7 +67,10 @@ int main()
     //SceneSubRoutine* scene = new SceneSubRoutine();
     
     //穴の開いた外見
-    SceneDiscard* scene = new SceneDiscard();
+    //SceneDiscard* scene = new SceneDiscard();
+
+    //複数の点光源によるシェーディング
+    SceneMultiLight* scene = new SceneMultiLight();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
