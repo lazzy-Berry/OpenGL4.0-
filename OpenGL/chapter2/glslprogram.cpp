@@ -299,7 +299,7 @@ bool GLSLProgram::validate()
 {
 	if (!isLinked()) return false;
 
-	GLint status = GL_FALSE;
+	GLint status = 0;
 	glValidateProgram(handle);
 	glGetProgramiv(handle, GL_VALIDATE_STATUS, &status);
 
@@ -323,4 +323,5 @@ bool GLSLProgram::validate()
 	else {
 		return true;
 	}
+	return false;
 }
