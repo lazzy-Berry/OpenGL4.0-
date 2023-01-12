@@ -34,6 +34,12 @@
     <Filter Include="ソース ファイル\chapter3\Mesh">
       <UniqueIdentifier>{07cd492f-458c-4231-bc1c-c7cf5113db85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3\directionalLight">
+      <UniqueIdentifier>{04d0519c-5072-4cff-86ef-c46b5464f9c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\directionalLight\Shader">
+      <UniqueIdentifier>{55da3988-e99b-4aa0-ab74-49abcb76b66b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -77,6 +83,9 @@
     </ClCompile>
     <ClCompile Include="chapter3\Mesh\VBOPlane.cpp">
       <Filter>ソース ファイル\chapter3\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\directionalLight\SceneDirectionalLight.cpp">
+      <Filter>ソース ファイル\chapter3\directionalLight</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +143,12 @@
     <None Include="chapter3\multiLight\Shader\MultiLightShader.vert">
       <Filter>ソース ファイル\chapter3\multiLight\Shader</Filter>
     </None>
+    <None Include="chapter3\directionalLight\Shader\DirectionalLightShader.frag">
+      <Filter>ソース ファイル\chapter3\directionalLight\Shader</Filter>
+    </None>
+    <None Include="chapter3\directionalLight\Shader\DirectionalLightShader.vert">
+      <Filter>ソース ファイル\chapter3\directionalLight\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -183,6 +198,9 @@
     </ClInclude>
     <ClInclude Include="chapter3\Mesh\VBOPlane.h">
       <Filter>ソース ファイル\chapter3\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\directionalLight\SceneDirectionalLight.h">
+      <Filter>ソース ファイル\chapter3\directionalLight</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

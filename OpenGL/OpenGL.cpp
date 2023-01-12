@@ -22,6 +22,7 @@
 #include "chapter2/SceneSubRoutine.h"
 #include "chapter2/DiscardScene.h"
 #include "chapter3/multiLight/SceneMultiLight.h"
+#include "chapter3/directionalLight/SceneDirectionalLight.h"
 
 int main()
 {
@@ -70,7 +71,10 @@ int main()
     //SceneDiscard* scene = new SceneDiscard();
 
     //複数の点光源によるシェーディング
-    SceneMultiLight* scene = new SceneMultiLight();
+    //SceneMultiLight* scene = new SceneMultiLight();
+
+    //指向性光源によるシェーディング
+    SceneDirectionalLight* scene = new SceneDirectionalLight();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
