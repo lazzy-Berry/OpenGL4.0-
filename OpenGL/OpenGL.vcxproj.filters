@@ -58,6 +58,12 @@
     <Filter Include="ソース ファイル\chapter3\Toon\Shader">
       <UniqueIdentifier>{1e31b109-db5f-44c9-82a1-4836fde25436}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3\Fog">
+      <UniqueIdentifier>{c2497284-6b1e-42ef-92f9-e88885894358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\Fog\Shader">
+      <UniqueIdentifier>{a9f3f204-cd8c-41e1-b22c-d9df1ca2455f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -113,6 +119,9 @@
     </ClCompile>
     <ClCompile Include="chapter3\Toon\SceneToon.cpp">
       <Filter>ソース ファイル\chapter3\Toon</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\Fog\SceneFog.cpp">
+      <Filter>ソース ファイル\chapter3\Fog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +203,12 @@
     <None Include="chapter3\Toon\Shader\ToonShader.frag">
       <Filter>ソース ファイル\chapter3\Toon\Shader</Filter>
     </None>
+    <None Include="chapter3\Fog\Shader\FogShader.vert">
+      <Filter>ソース ファイル\chapter3\Fog\Shader</Filter>
+    </None>
+    <None Include="chapter3\Fog\Shader\FogShader.frag">
+      <Filter>ソース ファイル\chapter3\Fog\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -255,6 +270,9 @@
     </ClInclude>
     <ClInclude Include="chapter3\Toon\SceneToon.h">
       <Filter>ソース ファイル\chapter3\Toon</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\Fog\SceneFog.h">
+      <Filter>ソース ファイル\chapter3\Fog</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

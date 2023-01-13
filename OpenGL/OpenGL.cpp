@@ -26,6 +26,7 @@
 #include "chapter3/PerFragment/ScenePerFragment.h"
 #include "chapter3/SpotLight/SceneSpotLight.h"
 #include "chapter3/Toon/SceneToon.h"
+#include "chapter3/Fog/SceneFog.h"
 
 int main()
 {
@@ -91,8 +92,10 @@ int main()
     //SceneSpotLight* scene = new SceneSpotLight();
 
     //ToonShadingの効果作成
-    SceneToon* scene = new SceneToon();
+    //SceneToon* scene = new SceneToon();
 
+    //フォグをシュミレートする
+    SceneFog* scene = new SceneFog();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
