@@ -64,17 +64,20 @@ void SceneTexture::initScene()
     angle = 0.0;
     prog.setUniform("Light.Intensity", vec3(1.0f, 1.0f, 1.0f));
     
+    //libjpeg
     // Load texture file
     const char* texName = "chapter4\\Texture\\brick1.jpg";
-    jpeg = new JPEG(texName);
-    
+    //jpeg = new JPEG(texName);
+    //if (!jpeg->Data)
+    //{
+    //    printf("ファイルがありません");
+    //}
+
+    //FreeImage
+    Texture2D* jpeg = new Texture2D(texName, FIF_JPEG);
+
     //テクスチャをGPUに転送
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-
-    if (!jpeg->Data)
-    {
-        printf("ファイルがありません");
-    }
 
     //ファイルをOpenGLにコピー
     glEnable(GL_TEXTURE_2D);
@@ -85,7 +88,8 @@ void SceneTexture::initScene()
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexImage2D(GL_TEXTURE_2D, 0, 3, jpeg->sizeX, jpeg->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, jpeg->Data);
+    //glTexImage2D(GL_TEXTURE_2D, 0, 3, jpeg->sizeX, jpeg->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, jpeg->Data);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, jpeg->getWidth(), jpeg->getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, jpeg->getBits());
 
     prog.setUniform("Tex1", 0);
 }

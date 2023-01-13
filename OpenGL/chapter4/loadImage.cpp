@@ -52,3 +52,102 @@ JPEG::JPEG(const char* FileName)
     Load(FileName);
    // TexSet();
 }
+
+Texture2D::Texture2D(const char* filename, const FREE_IMAGE_FORMAT format, int flags)
+{
+    m_image_file = FreeImage_Load(format, filename, flags);
+    if (!m_image_file)
+    {
+        printf("Cannot load file:\n");
+        system("PAUSE");
+        exit(1);
+    }
+    m_width = FreeImage_GetWidth(m_image_file);
+    m_height = FreeImage_GetHeight(m_image_file);
+    m_pitch = FreeImage_GetPitch(m_image_file);
+
+    //アルファチャンネルの有無によって領域の確保を変える
+    int bpp = FreeImage_GetBPP(m_image_file);
+    switch (bpp)
+    {
+    case 24:
+        allocateAsRGB();
+        break;
+    case 32:
+        allocateAsRGBA();
+        break;
+    }
+    FreeImage_Unload(m_image_file);
+}
+
+Texture2D::~Texture2D()
+{
+    delete[] m_bits;
+}
+
+unsigned char* Texture2D::getBits()
+{
+    return m_bits;
+}
+
+unsigned Texture2D::getWidth() const
+{
+    return m_width;
+}
+
+unsigned Texture2D::getHeight() const
+{
+    return m_height;
+}
+
+void Texture2D::allocateAsRGBA()
+{
+    //FIBITMAP形式からunsigned char*形式に変換する.
+    //RGBA情報を保存
+    m_bits = new unsigned char[m_width * m_height * 4];
+
+    unsigned int pitch = FreeImage_GetPitch(m_image_file);
+    unsigned int id = 0;
+    BYTE* bits = (BYTE*)FreeImage_GetBits(m_image_file);
+    for (unsigned int y = 0; y < m_height; ++y)
+    {
+        BYTE* pixel = (BYTE*)bits;
+        for (unsigned int x = 0; x < m_width; ++x)
+        {
+            m_bits[id] = pixel[FI_RGBA_RED];
+            m_bits[id + 1] = pixel[FI_RGBA_GREEN];
+            m_bits[id + 2] = pixel[FI_RGBA_BLUE];
+            m_bits[id + 3] = pixel[FI_RGBA_ALPHA];
+
+            id += 4;
+            pixel += 4;
+        }
+        bits += pitch;
+    }
+}
+
+void Texture2D::allocateAsRGB()
+{
+    //FIBITMAP形式からunsigned char*形式に変換する.
+//RGB情報を保存
+    m_bits = new unsigned char[m_width * m_height * 4];
+
+    unsigned int pitch = FreeImage_GetPitch(m_image_file);
+    unsigned int id = 0;
+    BYTE* bits = (BYTE*)FreeImage_GetBits(m_image_file);
+    for (unsigned int y = 0; y < m_height; ++y)
+    {
+        BYTE* pixel = (BYTE*)bits;
+        for (unsigned int x = 0; x < m_width; ++x)
+        {
+            m_bits[id] = pixel[FI_RGBA_RED];
+            m_bits[id + 1] = pixel[FI_RGBA_GREEN];
+            m_bits[id + 2] = pixel[FI_RGBA_BLUE];
+            m_bits[id + 3] = 255;
+
+            id += 4;
+            pixel += 3;
+        }
+        bits += pitch;
+    }
+}

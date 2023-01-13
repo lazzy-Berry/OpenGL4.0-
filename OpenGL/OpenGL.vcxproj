@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\jpegsr9e;$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)venders\FreeImage;C:\jpegsr9e;$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)venders\FreeImage;C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\jpegsr9e;$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)venders\FreeImage;C:\jpegsr9e;$(SolutionDir)venders\glew-2.1.0\include;$(SolutionDir)venders\glfw\include;$(SolutionDir)venders\glm\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)venders\FreeImage;C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64\;$(SolutionDir)venders\glfw\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -96,8 +96,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)venders\FreeImage;C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;jpeg.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,8 +126,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)venders\FreeImage;C:\jpegsr9e\Release\x64;$(SolutionDir)venders\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;jpeg.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

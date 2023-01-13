@@ -35,7 +35,7 @@ private:
     void setMatrices();
     void compileAndLinkShader();
     
-    JPEG* jpeg;
+    //JPEG* jpeg;
 public:
     SceneTexture()
     {};
