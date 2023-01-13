@@ -46,6 +46,12 @@
     <Filter Include="ソース ファイル\chapter3\PerFragment\Shader">
       <UniqueIdentifier>{8626840d-e5e0-4bf9-b7e6-ecfd02d19075}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3\SpotLight">
+      <UniqueIdentifier>{f91d6695-8ed6-4523-8f8f-712c85b9d91b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\SpotLight\Shader">
+      <UniqueIdentifier>{8d052651-de64-48ed-b984-ef9068866ef7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -95,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="chapter3\PerFragment\ScenePerFragment.cpp">
       <Filter>ソース ファイル\chapter3\PerFragment</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\SpotLight\SceneSpotLight.cpp">
+      <Filter>ソース ファイル\chapter3\SpotLight</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +173,12 @@
     <None Include="chapter3\PerFragment\Shader\PerFragmentShader.frag">
       <Filter>ソース ファイル\chapter3\PerFragment\Shader</Filter>
     </None>
+    <None Include="chapter3\SpotLight\Shader\SpotLightShader.vert">
+      <Filter>ソース ファイル\chapter3\SpotLight\Shader</Filter>
+    </None>
+    <None Include="chapter3\SpotLight\Shader\SpotLightShader.frag">
+      <Filter>ソース ファイル\chapter3\SpotLight\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -219,6 +234,9 @@
     </ClInclude>
     <ClInclude Include="chapter3\PerFragment\ScenePerFragment.h">
       <Filter>ソース ファイル\chapter3\PerFragment</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\SpotLight\SceneSpotLight.h">
+      <Filter>ソース ファイル\chapter3\SpotLight</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

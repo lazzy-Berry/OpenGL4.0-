@@ -24,6 +24,8 @@
 #include "chapter3/multiLight/SceneMultiLight.h"
 #include "chapter3/directionalLight/SceneDirectionalLight.h"
 #include "chapter3/PerFragment/ScenePerFragment.h"
+#include "chapter3/SpotLight/SceneSpotLight.h"
+
 int main()
 {
     // GLFW初期化
@@ -82,7 +84,10 @@ int main()
     //SceneDirectionalLight* scene = new SceneDirectionalLight();
 
     //フラグメント単位のシェーディングを使ったリアリズムの改善
-    ScenePerFragment* scene = new ScenePerFragment();
+    //ScenePerFragment* scene = new ScenePerFragment();
+
+    //スポットライトをシュミレーションする
+    SceneSpotLight* scene = new SceneSpotLight();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
