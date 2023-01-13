@@ -27,6 +27,7 @@
 #include "chapter3/SpotLight/SceneSpotLight.h"
 #include "chapter3/Toon/SceneToon.h"
 #include "chapter3/Fog/SceneFog.h"
+#include "chapter4/UseTexture/SceneTexture.h"
 
 int main()
 {
@@ -95,7 +96,10 @@ int main()
     //SceneToon* scene = new SceneToon();
 
     //フォグをシュミレートする
-    SceneFog* scene = new SceneFog();
+    //SceneFog* scene = new SceneFog();
+
+    //2Dテクスチャの適用
+    SceneTexture* scene = new SceneTexture();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

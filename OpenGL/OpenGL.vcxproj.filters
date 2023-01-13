@@ -64,6 +64,21 @@
     <Filter Include="ソース ファイル\chapter3\Fog\Shader">
       <UniqueIdentifier>{a9f3f204-cd8c-41e1-b22c-d9df1ca2455f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4">
+      <UniqueIdentifier>{01715b5c-9e61-42e3-93e1-b9aa768ee943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\Texture">
+      <UniqueIdentifier>{9acee814-6fda-48a6-8c5f-239b14b763a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\Mesh">
+      <UniqueIdentifier>{8e36120b-1967-45a0-90a4-10787d046529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\UseTexture">
+      <UniqueIdentifier>{3bd35fc5-7eeb-424b-9373-47857f6ebc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\UseTexture\Shader">
+      <UniqueIdentifier>{f3912a33-a25e-4bf0-bff7-07d662811d84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -122,6 +137,15 @@
     </ClCompile>
     <ClCompile Include="chapter3\Fog\SceneFog.cpp">
       <Filter>ソース ファイル\chapter3\Fog</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp">
+      <Filter>ソース ファイル\chapter4\UseTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\Mesh\VBOCube.cpp">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\loadImage.cpp">
+      <Filter>ソース ファイル\chapter4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +233,12 @@
     <None Include="chapter3\Fog\Shader\FogShader.frag">
       <Filter>ソース ファイル\chapter3\Fog\Shader</Filter>
     </None>
+    <None Include="chapter4\UseTexture\Shader\TextureShader.frag">
+      <Filter>ソース ファイル\chapter4\UseTexture\Shader</Filter>
+    </None>
+    <None Include="chapter4\UseTexture\Shader\TextureShader.vert">
+      <Filter>ソース ファイル\chapter4\UseTexture\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -274,5 +304,34 @@
     <ClInclude Include="chapter3\Fog\SceneFog.h">
       <Filter>ソース ファイル\chapter3\Fog</Filter>
     </ClInclude>
+    <ClInclude Include="chapter4\UseTexture\SceneTexture.h">
+      <Filter>ソース ファイル\chapter4\UseTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\Mesh\VBOCube.h">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\loadImage.h">
+      <Filter>ソース ファイル\chapter4</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="chapter4\Texture\brick1.jpg">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
+    <Image Include="chapter4\Texture\cement.jpg">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
+    <Image Include="chapter4\Texture\flower.png">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
+    <Image Include="chapter4\Texture\moss.png">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
+    <Image Include="chapter4\Texture\ogre_diffuse.png">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
+    <Image Include="chapter4\Texture\ogre_normalmap.png">
+      <Filter>ソース ファイル\chapter4\Texture</Filter>
+    </Image>
   </ItemGroup>
 </Project>
