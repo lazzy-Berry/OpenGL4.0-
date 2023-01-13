@@ -40,6 +40,12 @@
     <Filter Include="ソース ファイル\chapter3\directionalLight\Shader">
       <UniqueIdentifier>{55da3988-e99b-4aa0-ab74-49abcb76b66b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3\PerFragment">
+      <UniqueIdentifier>{eb883ce5-860d-411f-b971-f3357d1d668d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\PerFragment\Shader">
+      <UniqueIdentifier>{8626840d-e5e0-4bf9-b7e6-ecfd02d19075}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -86,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="chapter3\directionalLight\SceneDirectionalLight.cpp">
       <Filter>ソース ファイル\chapter3\directionalLight</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\PerFragment\ScenePerFragment.cpp">
+      <Filter>ソース ファイル\chapter3\PerFragment</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +158,12 @@
     <None Include="chapter3\directionalLight\Shader\DirectionalLightShader.vert">
       <Filter>ソース ファイル\chapter3\directionalLight\Shader</Filter>
     </None>
+    <None Include="chapter3\PerFragment\Shader\PerFragmentShader.vert">
+      <Filter>ソース ファイル\chapter3\PerFragment\Shader</Filter>
+    </None>
+    <None Include="chapter3\PerFragment\Shader\PerFragmentShader.frag">
+      <Filter>ソース ファイル\chapter3\PerFragment\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -201,6 +216,9 @@
     </ClInclude>
     <ClInclude Include="chapter3\directionalLight\SceneDirectionalLight.h">
       <Filter>ソース ファイル\chapter3\directionalLight</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\PerFragment\ScenePerFragment.h">
+      <Filter>ソース ファイル\chapter3\PerFragment</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -23,7 +23,7 @@
 #include "chapter2/DiscardScene.h"
 #include "chapter3/multiLight/SceneMultiLight.h"
 #include "chapter3/directionalLight/SceneDirectionalLight.h"
-
+#include "chapter3/PerFragment/ScenePerFragment.h"
 int main()
 {
     // GLFW初期化
@@ -52,6 +52,11 @@ int main()
         return -1;
     }
 
+    //timer用
+    double  prev = glfwGetTime();
+    const  double  TIME = 0.1;
+
+
     //DIffuse
     //Scene* scene = new Scene();
 
@@ -74,7 +79,10 @@ int main()
     //SceneMultiLight* scene = new SceneMultiLight();
 
     //指向性光源によるシェーディング
-    SceneDirectionalLight* scene = new SceneDirectionalLight();
+    //SceneDirectionalLight* scene = new SceneDirectionalLight();
+
+    //フラグメント単位のシェーディングを使ったリアリズムの改善
+    ScenePerFragment* scene = new ScenePerFragment();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
@@ -90,6 +98,14 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         scene->render();
+
+        //Timerイベント
+        double  now = glfwGetTime();
+        if (now - prev > TIME)
+        {
+            prev = now;
+            scene->update(TIME);
+        }
 
         // ダブルバッファのスワップ
         glfwSwapBuffers(window);
