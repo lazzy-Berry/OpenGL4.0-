@@ -25,6 +25,7 @@
 #include "chapter3/directionalLight/SceneDirectionalLight.h"
 #include "chapter3/PerFragment/ScenePerFragment.h"
 #include "chapter3/SpotLight/SceneSpotLight.h"
+#include "chapter3/Toon/SceneToon.h"
 
 int main()
 {
@@ -87,7 +88,11 @@ int main()
     //ScenePerFragment* scene = new ScenePerFragment();
 
     //スポットライトをシュミレーションする
-    SceneSpotLight* scene = new SceneSpotLight();
+    //SceneSpotLight* scene = new SceneSpotLight();
+
+    //ToonShadingの効果作成
+    SceneToon* scene = new SceneToon();
+
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

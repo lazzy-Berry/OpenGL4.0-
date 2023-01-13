@@ -52,6 +52,12 @@
     <Filter Include="ソース ファイル\chapter3\SpotLight\Shader">
       <UniqueIdentifier>{8d052651-de64-48ed-b984-ef9068866ef7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter3\Toon">
+      <UniqueIdentifier>{e017c20c-75cd-426b-9e31-a7c2a72e86ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter3\Toon\Shader">
+      <UniqueIdentifier>{1e31b109-db5f-44c9-82a1-4836fde25436}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -104,6 +110,9 @@
     </ClCompile>
     <ClCompile Include="chapter3\SpotLight\SceneSpotLight.cpp">
       <Filter>ソース ファイル\chapter3\SpotLight</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter3\Toon\SceneToon.cpp">
+      <Filter>ソース ファイル\chapter3\Toon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +188,12 @@
     <None Include="chapter3\SpotLight\Shader\SpotLightShader.frag">
       <Filter>ソース ファイル\chapter3\SpotLight\Shader</Filter>
     </None>
+    <None Include="chapter3\Toon\Shader\ToonShader.vert">
+      <Filter>ソース ファイル\chapter3\Toon\Shader</Filter>
+    </None>
+    <None Include="chapter3\Toon\Shader\ToonShader.frag">
+      <Filter>ソース ファイル\chapter3\Toon\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -237,6 +252,9 @@
     </ClInclude>
     <ClInclude Include="chapter3\SpotLight\SceneSpotLight.h">
       <Filter>ソース ファイル\chapter3\SpotLight</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter3\Toon\SceneToon.h">
+      <Filter>ソース ファイル\chapter3\Toon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

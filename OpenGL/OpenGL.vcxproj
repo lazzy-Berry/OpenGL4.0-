@@ -163,6 +163,7 @@
     <ClCompile Include="chapter3\multiLight\SceneMultiLight.cpp" />
     <ClCompile Include="chapter3\PerFragment\ScenePerFragment.cpp" />
     <ClCompile Include="chapter3\SpotLight\SceneSpotLight.cpp" />
+    <ClCompile Include="chapter3\Toon\SceneToon.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +191,8 @@
     <None Include="chapter3\PerFragment\Shader\PerFragmentShader.vert" />
     <None Include="chapter3\SpotLight\Shader\SpotLightShader.frag" />
     <None Include="chapter3\SpotLight\Shader\SpotLightShader.vert" />
+    <None Include="chapter3\Toon\Shader\ToonShader.frag" />
+    <None Include="chapter3\Toon\Shader\ToonShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -211,6 +214,7 @@
     <ClInclude Include="chapter3\multiLight\SceneMultiLight.h" />
     <ClInclude Include="chapter3\PerFragment\ScenePerFragment.h" />
     <ClInclude Include="chapter3\SpotLight\SceneSpotLight.h" />
+    <ClInclude Include="chapter3\Toon\SceneToon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
