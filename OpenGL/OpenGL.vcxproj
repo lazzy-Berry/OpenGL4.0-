@@ -167,6 +167,7 @@
     <ClCompile Include="chapter3\Toon\SceneToon.cpp" />
     <ClCompile Include="chapter4\loadImage.cpp" />
     <ClCompile Include="chapter4\Mesh\VBOCube.cpp" />
+    <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp" />
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -199,6 +200,8 @@
     <None Include="chapter3\SpotLight\Shader\SpotLightShader.vert" />
     <None Include="chapter3\Toon\Shader\ToonShader.frag" />
     <None Include="chapter3\Toon\Shader\ToonShader.vert" />
+    <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.frag" />
+    <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.vert" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.frag" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.vert" />
   </ItemGroup>
@@ -226,6 +229,7 @@
     <ClInclude Include="chapter3\Toon\SceneToon.h" />
     <ClInclude Include="chapter4\loadImage.h" />
     <ClInclude Include="chapter4\Mesh\VBOCube.h" />
+    <ClInclude Include="chapter4\MultiTexture\MultiTexture.h" />
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />
   </ItemGroup>
   <ItemGroup>

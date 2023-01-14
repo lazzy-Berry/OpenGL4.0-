@@ -79,6 +79,12 @@
     <Filter Include="ソース ファイル\chapter4\UseTexture\Shader">
       <UniqueIdentifier>{f3912a33-a25e-4bf0-bff7-07d662811d84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\MultiTexture">
+      <UniqueIdentifier>{60a4b302-5ba4-4166-b14a-566971d6bd78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\MultiTexture\Shader">
+      <UniqueIdentifier>{db985cec-8317-41a4-a90f-29252c8d0400}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -146,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\loadImage.cpp">
       <Filter>ソース ファイル\chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp">
+      <Filter>ソース ファイル\chapter4\MultiTexture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +248,12 @@
     <None Include="chapter4\UseTexture\Shader\TextureShader.vert">
       <Filter>ソース ファイル\chapter4\UseTexture\Shader</Filter>
     </None>
+    <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.vert">
+      <Filter>ソース ファイル\chapter4\MultiTexture\Shader</Filter>
+    </None>
+    <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.frag">
+      <Filter>ソース ファイル\chapter4\MultiTexture\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -312,6 +327,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\loadImage.h">
       <Filter>ソース ファイル\chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\MultiTexture\MultiTexture.h">
+      <Filter>ソース ファイル\chapter4\MultiTexture</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

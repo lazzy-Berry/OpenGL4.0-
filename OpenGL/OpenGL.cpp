@@ -28,6 +28,7 @@
 #include "chapter3/Toon/SceneToon.h"
 #include "chapter3/Fog/SceneFog.h"
 #include "chapter4/UseTexture/SceneTexture.h"
+#include "chapter4/MultiTexture/MultiTexture.h"
 
 int main()
 {
@@ -61,45 +62,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-
-    //DIffuse
-    //Scene* scene = new Scene();
-
-    //ADS
-    //ADSScene* scene = new ADSScene();
-
-    //両面シェーディング
-    //SceneTwoSide* scene = new SceneTwoSide();
-
-    //FlatShading
-    //FlatScene* scene = new FlatScene();
-
-    //サブルーチン
-    //SceneSubRoutine* scene = new SceneSubRoutine();
-    
-    //穴の開いた外見
-    //SceneDiscard* scene = new SceneDiscard();
-
-    //複数の点光源によるシェーディング
-    //SceneMultiLight* scene = new SceneMultiLight();
-
-    //指向性光源によるシェーディング
-    //SceneDirectionalLight* scene = new SceneDirectionalLight();
-
-    //フラグメント単位のシェーディングを使ったリアリズムの改善
-    //ScenePerFragment* scene = new ScenePerFragment();
-
-    //スポットライトをシュミレーションする
-    //SceneSpotLight* scene = new SceneSpotLight();
-
-    //ToonShadingの効果作成
-    //SceneToon* scene = new SceneToon();
-
-    //フォグをシュミレートする
-    //SceneFog* scene = new SceneFog();
-
-    //2Dテクスチャの適用
-    SceneTexture* scene = new SceneTexture();
+    //複数テクスチャの適用
+    SceneMultiTexture* scene = new SceneMultiTexture();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
