@@ -91,6 +91,12 @@
     <Filter Include="ソース ファイル\chapter4\AlphaTest\Shader">
       <UniqueIdentifier>{a7779d2b-5a1f-4f50-a06e-a212035a70f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\NormalMap">
+      <UniqueIdentifier>{9498236b-c198-42ac-9d34-6f5fd56a9946}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\NormalMap\Shader">
+      <UniqueIdentifier>{87ab3e4e-2144-4291-acda-7e95dda34dcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -164,6 +170,12 @@
     </ClCompile>
     <ClCompile Include="chapter4\AlphaTest\SceneAlphaTest.cpp">
       <Filter>ソース ファイル\chapter4\AlphaTest</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\NormalMap\SceneNormalMap.cpp">
+      <Filter>ソース ファイル\chapter4\NormalMap</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\Mesh\VBOMesh.cpp">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +281,12 @@
     <None Include="chapter4\AlphaTest\Shader\AlphaTestShader.frag">
       <Filter>ソース ファイル\chapter4\AlphaTest\Shader</Filter>
     </None>
+    <None Include="chapter4\NormalMap\Shader\NormalMapShader.frag">
+      <Filter>ソース ファイル\chapter4\NormalMap\Shader</Filter>
+    </None>
+    <None Include="chapter4\NormalMap\Shader\NormalMapShader.vert">
+      <Filter>ソース ファイル\chapter4\NormalMap\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -348,6 +366,12 @@
     </ClInclude>
     <ClInclude Include="chapter4\AlphaTest\SceneAlphaTest.h">
       <Filter>ソース ファイル\chapter4\AlphaTest</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\NormalMap\SceneNormalMap.h">
+      <Filter>ソース ファイル\chapter4\NormalMap</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\Mesh\VBOMesh.h">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

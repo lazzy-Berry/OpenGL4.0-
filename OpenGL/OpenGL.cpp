@@ -30,6 +30,7 @@
 #include "chapter4/UseTexture/SceneTexture.h"
 #include "chapter4/MultiTexture/MultiTexture.h"
 #include "chapter4/AlphaTest/SceneAlphaTest.h"
+#include "chapter4/NormalMap/SceneNormalMap.h"
 
 int main()
 {
@@ -63,8 +64,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //アルファマップを使ってピクセルを破棄する
-    SceneAlphaTest* scene = new SceneAlphaTest();
+    //法線マップを使う
+    SceneNormalMap* scene = new SceneNormalMap();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
