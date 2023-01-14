@@ -165,6 +165,7 @@
     <ClCompile Include="chapter3\PerFragment\ScenePerFragment.cpp" />
     <ClCompile Include="chapter3\SpotLight\SceneSpotLight.cpp" />
     <ClCompile Include="chapter3\Toon\SceneToon.cpp" />
+    <ClCompile Include="chapter4\AlphaTest\SceneAlphaTest.cpp" />
     <ClCompile Include="chapter4\loadImage.cpp" />
     <ClCompile Include="chapter4\Mesh\VBOCube.cpp" />
     <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp" />
@@ -200,6 +201,8 @@
     <None Include="chapter3\SpotLight\Shader\SpotLightShader.vert" />
     <None Include="chapter3\Toon\Shader\ToonShader.frag" />
     <None Include="chapter3\Toon\Shader\ToonShader.vert" />
+    <None Include="chapter4\AlphaTest\Shader\AlphaTestShader.frag" />
+    <None Include="chapter4\AlphaTest\Shader\AlphaTestShader.vert" />
     <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.frag" />
     <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.vert" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.frag" />
@@ -227,6 +230,7 @@
     <ClInclude Include="chapter3\PerFragment\ScenePerFragment.h" />
     <ClInclude Include="chapter3\SpotLight\SceneSpotLight.h" />
     <ClInclude Include="chapter3\Toon\SceneToon.h" />
+    <ClInclude Include="chapter4\AlphaTest\SceneAlphaTest.h" />
     <ClInclude Include="chapter4\loadImage.h" />
     <ClInclude Include="chapter4\Mesh\VBOCube.h" />
     <ClInclude Include="chapter4\MultiTexture\MultiTexture.h" />

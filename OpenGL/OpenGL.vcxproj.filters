@@ -85,6 +85,12 @@
     <Filter Include="ソース ファイル\chapter4\MultiTexture\Shader">
       <UniqueIdentifier>{db985cec-8317-41a4-a90f-29252c8d0400}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\AlphaTest">
+      <UniqueIdentifier>{25c3fc65-d7ef-43da-8657-c7ea3ca2fc1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\AlphaTest\Shader">
+      <UniqueIdentifier>{a7779d2b-5a1f-4f50-a06e-a212035a70f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -155,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp">
       <Filter>ソース ファイル\chapter4\MultiTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\AlphaTest\SceneAlphaTest.cpp">
+      <Filter>ソース ファイル\chapter4\AlphaTest</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -254,6 +263,12 @@
     <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.frag">
       <Filter>ソース ファイル\chapter4\MultiTexture\Shader</Filter>
     </None>
+    <None Include="chapter4\AlphaTest\Shader\AlphaTestShader.vert">
+      <Filter>ソース ファイル\chapter4\AlphaTest\Shader</Filter>
+    </None>
+    <None Include="chapter4\AlphaTest\Shader\AlphaTestShader.frag">
+      <Filter>ソース ファイル\chapter4\AlphaTest\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -330,6 +345,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\MultiTexture\MultiTexture.h">
       <Filter>ソース ファイル\chapter4\MultiTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\AlphaTest\SceneAlphaTest.h">
+      <Filter>ソース ファイル\chapter4\AlphaTest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

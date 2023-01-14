@@ -29,6 +29,7 @@
 #include "chapter3/Fog/SceneFog.h"
 #include "chapter4/UseTexture/SceneTexture.h"
 #include "chapter4/MultiTexture/MultiTexture.h"
+#include "chapter4/AlphaTest/SceneAlphaTest.h"
 
 int main()
 {
@@ -62,8 +63,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //複数テクスチャの適用
-    SceneMultiTexture* scene = new SceneMultiTexture();
+    //アルファマップを使ってピクセルを破棄する
+    SceneAlphaTest* scene = new SceneAlphaTest();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
