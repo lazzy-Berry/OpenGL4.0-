@@ -167,10 +167,12 @@
     <ClCompile Include="chapter3\Toon\SceneToon.cpp" />
     <ClCompile Include="chapter4\AlphaTest\SceneAlphaTest.cpp" />
     <ClCompile Include="chapter4\loadImage.cpp" />
+    <ClCompile Include="chapter4\Mesh\SkyBox.cpp" />
     <ClCompile Include="chapter4\Mesh\VBOCube.cpp" />
     <ClCompile Include="chapter4\Mesh\VBOMesh.cpp" />
     <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp" />
     <ClCompile Include="chapter4\NormalMap\SceneNormalMap.cpp" />
+    <ClCompile Include="chapter4\ReflectCube\SceneReflectCube.cpp" />
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -209,6 +211,8 @@
     <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.vert" />
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.frag" />
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.vert" />
+    <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.frag" />
+    <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.vert" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.frag" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.vert" />
   </ItemGroup>
@@ -236,10 +240,12 @@
     <ClInclude Include="chapter3\Toon\SceneToon.h" />
     <ClInclude Include="chapter4\AlphaTest\SceneAlphaTest.h" />
     <ClInclude Include="chapter4\loadImage.h" />
+    <ClInclude Include="chapter4\Mesh\SkyBox.h" />
     <ClInclude Include="chapter4\Mesh\VBOCube.h" />
     <ClInclude Include="chapter4\Mesh\VBOMesh.h" />
     <ClInclude Include="chapter4\MultiTexture\MultiTexture.h" />
     <ClInclude Include="chapter4\NormalMap\SceneNormalMap.h" />
+    <ClInclude Include="chapter4\ReflectCube\SceneReflectCube.h" />
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />
   </ItemGroup>
   <ItemGroup>

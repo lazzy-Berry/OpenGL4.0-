@@ -97,6 +97,12 @@
     <Filter Include="ソース ファイル\chapter4\NormalMap\Shader">
       <UniqueIdentifier>{87ab3e4e-2144-4291-acda-7e95dda34dcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\ReflectCube">
+      <UniqueIdentifier>{c849959e-ded9-4e10-8f00-e9d6760dd3ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\ReflectCube\Shader">
+      <UniqueIdentifier>{5db1db39-9e89-4e2f-9f88-b0a998bb1591}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -175,6 +181,12 @@
       <Filter>ソース ファイル\chapter4\NormalMap</Filter>
     </ClCompile>
     <ClCompile Include="chapter4\Mesh\VBOMesh.cpp">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\ReflectCube\SceneReflectCube.cpp">
+      <Filter>ソース ファイル\chapter4\ReflectCube</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\Mesh\SkyBox.cpp">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
@@ -287,6 +299,12 @@
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.vert">
       <Filter>ソース ファイル\chapter4\NormalMap\Shader</Filter>
     </None>
+    <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.vert">
+      <Filter>ソース ファイル\chapter4\ReflectCube\Shader</Filter>
+    </None>
+    <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.frag">
+      <Filter>ソース ファイル\chapter4\ReflectCube\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -371,6 +389,12 @@
       <Filter>ソース ファイル\chapter4\NormalMap</Filter>
     </ClInclude>
     <ClInclude Include="chapter4\Mesh\VBOMesh.h">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\ReflectCube\SceneReflectCube.h">
+      <Filter>ソース ファイル\chapter4\ReflectCube</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\Mesh\SkyBox.h">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
