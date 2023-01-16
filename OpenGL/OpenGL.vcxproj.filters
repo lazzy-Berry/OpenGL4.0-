@@ -103,6 +103,12 @@
     <Filter Include="ソース ファイル\chapter4\ReflectCube\Shader">
       <UniqueIdentifier>{5db1db39-9e89-4e2f-9f88-b0a998bb1591}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\RefractCube">
+      <UniqueIdentifier>{714892aa-b228-47ba-ae9c-a7bf67cde425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\RefractCube\Shader">
+      <UniqueIdentifier>{f4a9aaf4-f632-49e7-810e-c6f8fcf652b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -188,6 +194,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\Mesh\SkyBox.cpp">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\RefractCube\SceneRefractCube.cpp">
+      <Filter>ソース ファイル\chapter4\RefractCube</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +314,12 @@
     <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.frag">
       <Filter>ソース ファイル\chapter4\ReflectCube\Shader</Filter>
     </None>
+    <None Include="chapter4\RefractCube\Shader\RefractCubeShader.vert">
+      <Filter>ソース ファイル\chapter4\RefractCube\Shader</Filter>
+    </None>
+    <None Include="chapter4\RefractCube\Shader\RefractCubeShader.frag">
+      <Filter>ソース ファイル\chapter4\RefractCube\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -396,6 +411,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\Mesh\SkyBox.h">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\RefractCube\SceneRefractCube.h">
+      <Filter>ソース ファイル\chapter4\RefractCube</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

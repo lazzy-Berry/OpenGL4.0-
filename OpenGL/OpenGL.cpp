@@ -32,6 +32,7 @@
 #include "chapter4/AlphaTest/SceneAlphaTest.h"
 #include "chapter4/NormalMap/SceneNormalMap.h"
 #include "chapter4/ReflectCube/SceneReflectCube.h"
+#include "chapter4/RefractCube/SceneRefractCube.h"
 
 int main()
 {
@@ -65,8 +66,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //キューブマップで反射をシュミレートする
-    SceneReflectCube* scene = new SceneReflectCube();
+    //キューブマップで屈折をシュミレートする
+    SceneRefractCube* scene = new SceneRefractCube();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

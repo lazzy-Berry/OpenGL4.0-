@@ -173,6 +173,7 @@
     <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp" />
     <ClCompile Include="chapter4\NormalMap\SceneNormalMap.cpp" />
     <ClCompile Include="chapter4\ReflectCube\SceneReflectCube.cpp" />
+    <ClCompile Include="chapter4\RefractCube\SceneRefractCube.cpp" />
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -213,6 +214,8 @@
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.vert" />
     <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.frag" />
     <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.vert" />
+    <None Include="chapter4\RefractCube\Shader\RefractCubeShader.frag" />
+    <None Include="chapter4\RefractCube\Shader\RefractCubeShader.vert" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.frag" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.vert" />
   </ItemGroup>
@@ -246,6 +249,7 @@
     <ClInclude Include="chapter4\MultiTexture\MultiTexture.h" />
     <ClInclude Include="chapter4\NormalMap\SceneNormalMap.h" />
     <ClInclude Include="chapter4\ReflectCube\SceneReflectCube.h" />
+    <ClInclude Include="chapter4\RefractCube\SceneRefractCube.h" />
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />
   </ItemGroup>
   <ItemGroup>
