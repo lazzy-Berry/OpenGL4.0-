@@ -35,6 +35,8 @@
 #include "chapter4/RefractCube/SceneRefractCube.h"
 #include "chapter4/Projtex/SceneProjtex.h"
 #include "chapter4/RenderToTex/SceneRenderToTex.h"
+#include "chapter5/Edge/SceneEdge.h"
+
 int main()
 {
     // GLFW初期化
@@ -67,8 +69,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //テクスチャのレンダリング
-    SceneRenderToTex* scene = new SceneRenderToTex();
+    //エッジ検出フィルタの適用
+    SceneEdge* scene = new SceneEdge();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

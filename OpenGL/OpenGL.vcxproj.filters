@@ -121,6 +121,15 @@
     <Filter Include="ソース ファイル\chapter4\RenderToTex\Shader">
       <UniqueIdentifier>{37cfc49b-2d75-431f-8dd6-ebbae3684c2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5">
+      <UniqueIdentifier>{e60b2795-5c44-4bf9-8a45-f69ee34aac82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Edge">
+      <UniqueIdentifier>{ad20f1bb-9c8c-44ca-92c2-fd1bb6eddcfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Edge\Shader">
+      <UniqueIdentifier>{6ed09e9b-4bcc-4f9d-8454-60a06035f389}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -215,6 +224,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\RenderToTex\SceneRenderToTex.cpp">
       <Filter>ソース ファイル\chapter4\RenderToTex</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\Edge\SceneEdge.cpp">
+      <Filter>ソース ファイル\chapter5\Edge</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -350,6 +362,12 @@
     <None Include="chapter4\RenderToTex\Shader\RenderToTexShader.frag">
       <Filter>ソース ファイル\chapter4\RenderToTex\Shader</Filter>
     </None>
+    <None Include="chapter5\Edge\Shader\EdgeShader.vert">
+      <Filter>ソース ファイル\chapter5\Edge\Shader</Filter>
+    </None>
+    <None Include="chapter5\Edge\Shader\EdgeShader.frag">
+      <Filter>ソース ファイル\chapter5\Edge\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -450,6 +468,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\RenderToTex\SceneRenderToTex.h">
       <Filter>ソース ファイル\chapter4\RenderToTex</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\Edge\SceneEdge.h">
+      <Filter>ソース ファイル\chapter5\Edge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
