@@ -172,6 +172,7 @@
     <ClCompile Include="chapter4\Mesh\VBOMesh.cpp" />
     <ClCompile Include="chapter4\MultiTexture\MultiTexture.cpp" />
     <ClCompile Include="chapter4\NormalMap\SceneNormalMap.cpp" />
+    <ClCompile Include="chapter4\Projtex\SceneProjtex.cpp" />
     <ClCompile Include="chapter4\ReflectCube\SceneReflectCube.cpp" />
     <ClCompile Include="chapter4\RefractCube\SceneRefractCube.cpp" />
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
@@ -212,6 +213,8 @@
     <None Include="chapter4\MultiTexture\Shader\MultiTextureShader.vert" />
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.frag" />
     <None Include="chapter4\NormalMap\Shader\NormalMapShader.vert" />
+    <None Include="chapter4\Projtex\Shader\ProjtexShader.frag" />
+    <None Include="chapter4\Projtex\Shader\ProjtexShader.vert" />
     <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.frag" />
     <None Include="chapter4\ReflectCube\Shader\ReflectCubeShader.vert" />
     <None Include="chapter4\RefractCube\Shader\RefractCubeShader.frag" />
@@ -248,6 +251,7 @@
     <ClInclude Include="chapter4\Mesh\VBOMesh.h" />
     <ClInclude Include="chapter4\MultiTexture\MultiTexture.h" />
     <ClInclude Include="chapter4\NormalMap\SceneNormalMap.h" />
+    <ClInclude Include="chapter4\Projtex\SceneProjtex.h" />
     <ClInclude Include="chapter4\ReflectCube\SceneReflectCube.h" />
     <ClInclude Include="chapter4\RefractCube\SceneRefractCube.h" />
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />

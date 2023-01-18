@@ -109,6 +109,12 @@
     <Filter Include="ソース ファイル\chapter4\RefractCube\Shader">
       <UniqueIdentifier>{f4a9aaf4-f632-49e7-810e-c6f8fcf652b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\projTex">
+      <UniqueIdentifier>{538ae6f8-8e59-4dfb-9cd3-673b054a5a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\projTex\Shader">
+      <UniqueIdentifier>{0c0d1308-0642-4a86-9625-8340dbc7dff5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -197,6 +203,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\RefractCube\SceneRefractCube.cpp">
       <Filter>ソース ファイル\chapter4\RefractCube</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\Projtex\SceneProjtex.cpp">
+      <Filter>ソース ファイル\chapter4\projTex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +329,12 @@
     <None Include="chapter4\RefractCube\Shader\RefractCubeShader.frag">
       <Filter>ソース ファイル\chapter4\RefractCube\Shader</Filter>
     </None>
+    <None Include="chapter4\Projtex\Shader\ProjtexShader.vert">
+      <Filter>ソース ファイル\chapter4\projTex</Filter>
+    </None>
+    <None Include="chapter4\Projtex\Shader\ProjtexShader.frag">
+      <Filter>ソース ファイル\chapter4\projTex</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -414,6 +429,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\RefractCube\SceneRefractCube.h">
       <Filter>ソース ファイル\chapter4\RefractCube</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\Projtex\SceneProjtex.h">
+      <Filter>ソース ファイル\chapter4\projTex</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
