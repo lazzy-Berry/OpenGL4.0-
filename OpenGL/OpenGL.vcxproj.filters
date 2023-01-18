@@ -115,6 +115,12 @@
     <Filter Include="ソース ファイル\chapter4\projTex\Shader">
       <UniqueIdentifier>{0c0d1308-0642-4a86-9625-8340dbc7dff5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter4\RenderToTex">
+      <UniqueIdentifier>{032efaf6-8d80-4dc3-bc63-f6d9cad41f06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter4\RenderToTex\Shader">
+      <UniqueIdentifier>{37cfc49b-2d75-431f-8dd6-ebbae3684c2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -206,6 +212,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\Projtex\SceneProjtex.cpp">
       <Filter>ソース ファイル\chapter4\projTex</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\RenderToTex\SceneRenderToTex.cpp">
+      <Filter>ソース ファイル\chapter4\RenderToTex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +344,12 @@
     <None Include="chapter4\Projtex\Shader\ProjtexShader.frag">
       <Filter>ソース ファイル\chapter4\projTex</Filter>
     </None>
+    <None Include="chapter4\RenderToTex\Shader\RenderToTexShader.vert">
+      <Filter>ソース ファイル\chapter4\RenderToTex\Shader</Filter>
+    </None>
+    <None Include="chapter4\RenderToTex\Shader\RenderToTexShader.frag">
+      <Filter>ソース ファイル\chapter4\RenderToTex\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -432,6 +447,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\Projtex\SceneProjtex.h">
       <Filter>ソース ファイル\chapter4\projTex</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\RenderToTex\SceneRenderToTex.h">
+      <Filter>ソース ファイル\chapter4\RenderToTex</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
