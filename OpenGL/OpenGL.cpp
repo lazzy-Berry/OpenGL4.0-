@@ -40,6 +40,7 @@
 #include "chapter5/Bloom/SceneBloom.h"
 #include "chapter5/Gamma/SceneGamma.h"
 #include "chapter5/MSAA/SceneMSAA.h"
+#include "chapter5/Defferd/SceneDefferd.h"
 
 int main()
 {
@@ -73,8 +74,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //マルチサンプル　アンチエイリアシングを使う
-    SceneMSAA* scene = new SceneMSAA();
+    //遅延シェーディングを使う
+    SceneDefferd* scene = new SceneDefferd();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

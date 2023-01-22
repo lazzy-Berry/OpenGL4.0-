@@ -154,6 +154,12 @@
     <Filter Include="ソース ファイル\chapter5\MSAA\Shader">
       <UniqueIdentifier>{9dbd060b-353f-4c45-adbe-fde494557150}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5\Defferd">
+      <UniqueIdentifier>{1799c0ad-bf99-457e-9cbd-375c7b4c5306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Defferd\Shader">
+      <UniqueIdentifier>{9f2d8aec-cdc2-48d6-b808-7757940c93d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -263,6 +269,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\MSAA\SceneMSAA.cpp">
       <Filter>ソース ファイル\chapter5\MSAA</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\Defferd\SceneDefferd.cpp">
+      <Filter>ソース ファイル\chapter5\Defferd</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -428,6 +437,12 @@
     <None Include="chapter5\MSAA\Shader\MSAAShader.vert">
       <Filter>ソース ファイル\chapter5\MSAA\Shader</Filter>
     </None>
+    <None Include="chapter5\Defferd\Shader\DefferdShader.frag">
+      <Filter>ソース ファイル\chapter5\Defferd\Shader</Filter>
+    </None>
+    <None Include="chapter5\Defferd\Shader\DefferdShader.vert">
+      <Filter>ソース ファイル\chapter5\Defferd\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -543,6 +558,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\MSAA\SceneMSAA.h">
       <Filter>ソース ファイル\chapter5\MSAA</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\Defferd\SceneDefferd.h">
+      <Filter>ソース ファイル\chapter5\Defferd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

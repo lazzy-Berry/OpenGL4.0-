@@ -179,6 +179,7 @@
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
     <ClCompile Include="chapter5\Bloom\SceneBloom.cpp" />
     <ClCompile Include="chapter5\Blur\SceneBlur.cpp" />
+    <ClCompile Include="chapter5\Defferd\SceneDefferd.cpp" />
     <ClCompile Include="chapter5\Edge\SceneEdge.cpp" />
     <ClCompile Include="chapter5\Gamma\SceneGamma.cpp" />
     <ClCompile Include="chapter5\MSAA\SceneMSAA.cpp" />
@@ -233,6 +234,8 @@
     <None Include="chapter5\Bloom\Shader\BloomShader.vert" />
     <None Include="chapter5\Blur\Shader\BlurShader.frag" />
     <None Include="chapter5\Blur\Shader\BlurShader.vert" />
+    <None Include="chapter5\Defferd\Shader\DefferdShader.frag" />
+    <None Include="chapter5\Defferd\Shader\DefferdShader.vert" />
     <None Include="chapter5\Edge\Shader\EdgeShader.frag" />
     <None Include="chapter5\Edge\Shader\EdgeShader.vert" />
     <None Include="chapter5\Gamma\Shader\GammaShader.frag" />
@@ -276,6 +279,7 @@
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />
     <ClInclude Include="chapter5\Bloom\SceneBloom.h" />
     <ClInclude Include="chapter5\Blur\SceneBlur.h" />
+    <ClInclude Include="chapter5\Defferd\SceneDefferd.h" />
     <ClInclude Include="chapter5\Edge\SceneEdge.h" />
     <ClInclude Include="chapter5\Gamma\SceneGamma.h" />
     <ClInclude Include="chapter5\MSAA\SceneMSAA.h" />
