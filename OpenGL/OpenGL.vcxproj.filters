@@ -130,6 +130,12 @@
     <Filter Include="ソース ファイル\chapter5\Edge\Shader">
       <UniqueIdentifier>{6ed09e9b-4bcc-4f9d-8454-60a06035f389}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5\Blur">
+      <UniqueIdentifier>{12589fb1-7123-4901-bba8-9a638a758600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Blur\Shader">
+      <UniqueIdentifier>{49f668d1-4f7d-4b4e-8a92-4214ca25083b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -227,6 +233,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\Edge\SceneEdge.cpp">
       <Filter>ソース ファイル\chapter5\Edge</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\Blur\SceneBlur.cpp">
+      <Filter>ソース ファイル\chapter5\Blur</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -368,6 +377,12 @@
     <None Include="chapter5\Edge\Shader\EdgeShader.frag">
       <Filter>ソース ファイル\chapter5\Edge\Shader</Filter>
     </None>
+    <None Include="chapter5\Blur\Shader\BlurShader.vert">
+      <Filter>ソース ファイル\chapter5\Blur\Shader</Filter>
+    </None>
+    <None Include="chapter5\Blur\Shader\BlurShader.frag">
+      <Filter>ソース ファイル\chapter5\Blur\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -471,6 +486,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\Edge\SceneEdge.h">
       <Filter>ソース ファイル\chapter5\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\Blur\SceneBlur.h">
+      <Filter>ソース ファイル\chapter5\Blur</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

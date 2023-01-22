@@ -36,6 +36,7 @@
 #include "chapter4/Projtex/SceneProjtex.h"
 #include "chapter4/RenderToTex/SceneRenderToTex.h"
 #include "chapter5/Edge/SceneEdge.h"
+#include "chapter5/Blur/SceneBlur.h"
 
 int main()
 {
@@ -69,8 +70,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //エッジ検出フィルタの適用
-    SceneEdge* scene = new SceneEdge();
+    //ガウスブラーフィルタの適用
+    SceneBlur* scene = new SceneBlur();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
