@@ -184,6 +184,7 @@
     <ClCompile Include="chapter5\Gamma\SceneGamma.cpp" />
     <ClCompile Include="chapter5\MSAA\SceneMSAA.cpp" />
     <ClCompile Include="chapter6\PointsSprite\ScenePointsSprite.cpp" />
+    <ClCompile Include="chapter6\ShadeWire\SceneShadeWire.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +247,9 @@
     <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.frag" />
     <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.gs" />
     <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.vert" />
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.frag" />
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.gs" />
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -288,6 +292,7 @@
     <ClInclude Include="chapter5\Gamma\SceneGamma.h" />
     <ClInclude Include="chapter5\MSAA\SceneMSAA.h" />
     <ClInclude Include="chapter6\PointsSprite\ScenePointsSprite.h" />
+    <ClInclude Include="chapter6\ShadeWire\SceneShadeWire.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="chapter4\Texture\brick1.jpg" />

@@ -42,6 +42,7 @@
 #include "chapter5/MSAA/SceneMSAA.h"
 #include "chapter5/Defferd/SceneDefferd.h"
 #include "chapter6/PointsSprite/ScenePointsSprite.h"
+#include "chapter6/ShadeWire/SceneShadeWire.h"
 
 int main()
 {
@@ -75,8 +76,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ジオメトリシェーダーによる点スプライト
-    ScenePointsSprite* scene = new ScenePointsSprite();
+    //シェーディングしたメッシュの上にワイヤフレームを描く
+    SceneShadeWire* scene = new SceneShadeWire();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

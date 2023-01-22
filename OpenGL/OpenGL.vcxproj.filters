@@ -169,6 +169,12 @@
     <Filter Include="ソース ファイル\chapter6\PointsSprite\Shader">
       <UniqueIdentifier>{2689a2c1-974f-44b9-bf70-b93ff2d82e5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter6\ShadeWire">
+      <UniqueIdentifier>{23bfc471-c6cc-4892-96b9-b64b34108e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\ShadeWire\Shader">
+      <UniqueIdentifier>{dadd62c0-ee37-4ac2-a19e-0bcfb578b406}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -284,6 +290,9 @@
     </ClCompile>
     <ClCompile Include="chapter6\PointsSprite\ScenePointsSprite.cpp">
       <Filter>ソース ファイル\chapter6\PointsSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\ShadeWire\SceneShadeWire.cpp">
+      <Filter>ソース ファイル\chapter6\ShadeWire</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -464,6 +473,15 @@
     <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.gs">
       <Filter>ソース ファイル\chapter6\PointsSprite\Shader</Filter>
     </None>
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.frag">
+      <Filter>ソース ファイル\chapter6\ShadeWire\Shader</Filter>
+    </None>
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.gs">
+      <Filter>ソース ファイル\chapter6\ShadeWire\Shader</Filter>
+    </None>
+    <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.vert">
+      <Filter>ソース ファイル\chapter6\ShadeWire\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -585,6 +603,9 @@
     </ClInclude>
     <ClInclude Include="chapter6\PointsSprite\ScenePointsSprite.h">
       <Filter>ソース ファイル\chapter6\PointsSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\ShadeWire\SceneShadeWire.h">
+      <Filter>ソース ファイル\chapter6\ShadeWire</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
