@@ -39,6 +39,7 @@
 #include "chapter5/Blur/SceneBlur.h"
 #include "chapter5/Bloom/SceneBloom.h"
 #include "chapter5/Gamma/SceneGamma.h"
+#include "chapter5/MSAA/SceneMSAA.h"
 
 int main()
 {
@@ -72,8 +73,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ガンマ補正によるイメージ品質の改善
-    SceneGamma* scene = new SceneGamma();
+    //マルチサンプル　アンチエイリアシングを使う
+    SceneMSAA* scene = new SceneMSAA();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

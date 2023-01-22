@@ -148,6 +148,12 @@
     <Filter Include="ソース ファイル\chapter5\Gamma\Shader">
       <UniqueIdentifier>{9c556cfc-aca5-49a2-a4b5-9ef2ca95bf4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5\MSAA">
+      <UniqueIdentifier>{37c4558d-e690-454f-8bf9-89b0eee4526d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\MSAA\Shader">
+      <UniqueIdentifier>{9dbd060b-353f-4c45-adbe-fde494557150}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -254,6 +260,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\Gamma\SceneGamma.cpp">
       <Filter>ソース ファイル\chapter5\Gamma</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\MSAA\SceneMSAA.cpp">
+      <Filter>ソース ファイル\chapter5\MSAA</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -413,6 +422,12 @@
     <None Include="chapter5\Gamma\Shader\GammaShader.vert">
       <Filter>ソース ファイル\chapter5\Gamma\Shader</Filter>
     </None>
+    <None Include="chapter5\MSAA\Shader\MSAAShader.frag">
+      <Filter>ソース ファイル\chapter5\MSAA\Shader</Filter>
+    </None>
+    <None Include="chapter5\MSAA\Shader\MSAAShader.vert">
+      <Filter>ソース ファイル\chapter5\MSAA\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -525,6 +540,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\Gamma\SceneGamma.h">
       <Filter>ソース ファイル\chapter5\Gamma</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\MSAA\SceneMSAA.h">
+      <Filter>ソース ファイル\chapter5\MSAA</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

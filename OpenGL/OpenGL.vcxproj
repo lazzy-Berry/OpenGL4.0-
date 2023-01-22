@@ -181,6 +181,7 @@
     <ClCompile Include="chapter5\Blur\SceneBlur.cpp" />
     <ClCompile Include="chapter5\Edge\SceneEdge.cpp" />
     <ClCompile Include="chapter5\Gamma\SceneGamma.cpp" />
+    <ClCompile Include="chapter5\MSAA\SceneMSAA.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +237,8 @@
     <None Include="chapter5\Edge\Shader\EdgeShader.vert" />
     <None Include="chapter5\Gamma\Shader\GammaShader.frag" />
     <None Include="chapter5\Gamma\Shader\GammaShader.vert" />
+    <None Include="chapter5\MSAA\Shader\MSAAShader.frag" />
+    <None Include="chapter5\MSAA\Shader\MSAAShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -275,6 +278,7 @@
     <ClInclude Include="chapter5\Blur\SceneBlur.h" />
     <ClInclude Include="chapter5\Edge\SceneEdge.h" />
     <ClInclude Include="chapter5\Gamma\SceneGamma.h" />
+    <ClInclude Include="chapter5\MSAA\SceneMSAA.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="chapter4\Texture\brick1.jpg" />
