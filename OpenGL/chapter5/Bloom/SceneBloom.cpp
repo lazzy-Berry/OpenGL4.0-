@@ -1,4 +1,4 @@
-#include "SceneBlur.h"
+#include "SceneBloom.h"
 #include "../../chapter2/defines.h"
 
 using glm::vec3;
@@ -10,7 +10,7 @@ using glm::vec3;
 #include <cstdio>
 #include <cstdlib>
 
-void SceneBlur::setMatrices()
+void SceneBloom::setMatrices()
 {
     mat4 mv = view * model;
     prog.setUniform("ModelViewMatrix", mv);
@@ -19,15 +19,15 @@ void SceneBlur::setMatrices()
     prog.setUniform("MVP", projection * mv);
 }
 
-void SceneBlur::compileAndLinkShader()
+void SceneBloom::compileAndLinkShader()
 {
-    if (!prog.compileShaderFromFile("chapter5\\Blur\\Shader\\BlurShader.vert", GLSLShader::VERTEX))
+    if (!prog.compileShaderFromFile("chapter5\\Bloom\\Shader\\BloomShader.vert", GLSLShader::VERTEX))
     {
         printf("Vertex shader failed to compile!\n%s",
             prog.log().c_str());
         exit(1);
     }
-    if (!prog.compileShaderFromFile("chapter5\\Blur\\Shader\\BlurShader.frag", GLSLShader::FRAGMENT))
+    if (!prog.compileShaderFromFile("chapter5\\Bloom\\Shader\\BloomShader.frag", GLSLShader::FRAGMENT))
     {
         printf("Fragment shader failed to compile!\n%s",
             prog.log().c_str());
@@ -50,7 +50,7 @@ void SceneBlur::compileAndLinkShader()
     prog.use();
 }
 
-void SceneBlur::setupFBO()
+void SceneBloom::setupFBO()
 {
     // Generate and bind the framebuffer
     glGenFramebuffers(1, &renderFBO);
@@ -85,21 +85,37 @@ void SceneBlur::setupFBO()
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
     // Generate and bind the framebuffer
-    glGenFramebuffers(1, &intermediateFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, intermediateFBO);
+    glGenFramebuffers(1, &fbo1);
+    glBindFramebuffer(GL_FRAMEBUFFER, fbo1);
 
     // Create the texture object
-    glGenTextures(1, &intermediateTex);
-    glActiveTexture(GL_TEXTURE0);  // Use texture unit 0
-    glBindTexture(GL_TEXTURE_2D, intermediateTex);
+    glGenTextures(1, &tex1);
+    glActiveTexture(GL_TEXTURE1);  // Use texture unit 0
+    glBindTexture(GL_TEXTURE_2D, tex1);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
     // Bind the texture to the FBO
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, intermediateTex, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, tex1, 0);
 
     // No depth buffer needed for this FBO
+
+    // Set the targets for the fragment output variables
+    glDrawBuffers(1, drawBuffers);
+
+    glGenFramebuffers(1, &fbo2);
+    glBindFramebuffer(GL_FRAMEBUFFER, fbo2);
+
+    // Create the texture object
+    glGenTextures(1, &tex2);
+    glBindTexture(GL_TEXTURE_2D, tex2);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+    // Bind the texture to the FBO
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, tex2, 0);
 
     // Set the targets for the fragment output variables
     glDrawBuffers(1, drawBuffers);
@@ -108,17 +124,18 @@ void SceneBlur::setupFBO()
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
-void SceneBlur::pass1()
+void SceneBloom::pass1()
 {
     glBindFramebuffer(GL_FRAMEBUFFER, renderFBO);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+    glEnable(GL_DEPTH_TEST);
     glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass1Index);
 
-    view = glm::lookAt(vec3(7.0f * cos(angle), 4.0f, 7.0f * sin(angle)), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+    view = glm::lookAt(vec3(10.0f * cos(angle), 3.0f, 10.0f * sin(angle)), vec3(-1.0f, 1.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
     projection = glm::perspective(90.0f, (float)width / height, 0.3f, 100.0f);
 
-    prog.setUniform("Light.Position", vec4(0.0f, 0.0f, 0.0f, 1.0f));
+    prog.setUniform("Light[0].Position", view * vec4(-10.0f, 10.0f, 10.0f, 1.0f));
+    prog.setUniform("Light[1].Position", view * vec4(10.0f, 10.0f, 10.0f, 1.0f));
     prog.setUniform("Material.Kd", 0.9f, 0.9f, 0.9f);
     prog.setUniform("Material.Ks", 0.95f, 0.95f, 0.95f);
     prog.setUniform("Material.Ka", 0.1f, 0.1f, 0.1f);
@@ -139,7 +156,6 @@ void SceneBlur::pass1()
     setMatrices();
     plane->render();
 
-    prog.setUniform("Light.Position", vec4(0.0f, 0.0f, 0.0f, 1.0f));
     prog.setUniform("Material.Kd", 0.9f, 0.5f, 0.2f);
     prog.setUniform("Material.Ks", 0.95f, 0.95f, 0.95f);
     prog.setUniform("Material.Ka", 0.1f, 0.1f, 0.1f);
@@ -149,19 +165,18 @@ void SceneBlur::pass1()
     model *= glm::rotate(90.0f, vec3(1.0f, 0.0f, 0.0f));
     setMatrices();
     torus->render();
+
+    glFinish();
 }
 
-void SceneBlur::pass2()
+void SceneBloom::pass2()
 {
-    glBindFramebuffer(GL_FRAMEBUFFER, intermediateFBO);
+    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass2Index);
+    glBindFramebuffer(GL_FRAMEBUFFER, fbo1);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, renderTex);
     glDisable(GL_DEPTH_TEST);
-
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass2Index);
     model = mat4(1.0f);
     view = mat4(1.0f);
     projection = mat4(1.0f);
@@ -170,36 +185,44 @@ void SceneBlur::pass2()
     // Render the full-screen quad
     glBindVertexArray(fsQuad);
     glDrawArrays(GL_TRIANGLES, 0, 6);
+
+    glFinish();
 }
 
-void SceneBlur::pass3()
+void SceneBloom::pass3()
 {
+    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass3Index);
+    glBindFramebuffer(GL_FRAMEBUFFER, fbo2);
+
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, tex1);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glBindVertexArray(fsQuad);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+}
+
+void SceneBloom::pass4()
+{
+    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass4Index);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, intermediateTex);
-
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, tex2);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glUniformSubroutinesuiv(GL_FRAGMENT_SHADER, 1, &pass3Index);
-    model = mat4(1.0f);
-    view = mat4(1.0f);
-    projection = mat4(1.0f);
-    setMatrices();
-
-    // Render the full-screen quad
     glBindVertexArray(fsQuad);
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
-float SceneBlur::gauss(float x, float sigma2)
+float SceneBloom::gauss(float x, float sigma2)
 {
     double coeff = 1.0 / (2.0 * PI * sigma2);
     double expon = -(x * x) / (2.0 * sigma2);
     return (float)(coeff * exp(expon));
 }
 
-void SceneBlur::initScene()
+void SceneBloom::initScene()
 {
     compileAndLinkShader();
 
@@ -254,46 +277,50 @@ void SceneBlur::initScene()
     pass1Index = glGetSubroutineIndex(programHandle, GL_FRAGMENT_SHADER, "pass1");
     pass2Index = glGetSubroutineIndex(programHandle, GL_FRAGMENT_SHADER, "pass2");
     pass3Index = glGetSubroutineIndex(programHandle, GL_FRAGMENT_SHADER, "pass3");
+    pass4Index = glGetSubroutineIndex(programHandle, GL_FRAGMENT_SHADER, "pass4");
 
     prog.setUniform("Width", 800);
     prog.setUniform("Height", 600);
-    prog.setUniform("Texture0", 0);
-    prog.setUniform("Light.Intensity", vec3(1.0f, 1.0f, 1.0f));
+    prog.setUniform("RenderTex", 0);
+    prog.setUniform("BlurTex", 1);
+    prog.setUniform("LumThresh", 0.75f);
+    prog.setUniform("Light[0].Intensity", vec3(0.7f, 0.7f, 0.7f));
+    prog.setUniform("Light[1].Intensity", vec3(0.7f, 0.7f, 0.7f));
 
     char uniName[20];
-    float weights[5], sum, sigma2 = 8.0f;
+    float weights[10], sum, sigma2 = 25.0f;
 
-    //重みを計算して合計
-    weights[0] = gauss(0, sigma2); // 1-Dガウス関数
+    // Compute and sum the weights
+    weights[0] = gauss(0, sigma2);
     sum = weights[0];
-    for (int i = 1; i < 5; i++)
-    {
+    for (int i = 1; i < 10; i++) {
         weights[i] = gauss(i, sigma2);
         sum += 2 * weights[i];
     }
 
-    //重みを正規化してユニフォーム変数を設定
-    for (int i = 0; i < 5; i++)
-    {
+    // Normalize the weights and set the uniform
+    for (int i = 0; i < 10; i++) {
         snprintf(uniName, 20, "Weight[%d]", i);
-        prog.setUniform(uniName, weights[i] / sum);
+        float val = weights[i] / sum;
+        prog.setUniform(uniName, val);
     }
 }
 
-void SceneBlur::render()
+void SceneBloom::render()
 {
     pass1();
     pass2();
     pass3();
+    pass4();
 }
 
-void SceneBlur::update(float t)
+void SceneBloom::update(float t)
 {
     angle += 0.01f;
     if (angle > TWOPI) angle -= TWOPI;
 }
 
-void SceneBlur::resize(int w, int h)
+void SceneBloom::resize(int w, int h)
 {
     glViewport(0, 0, w, h);
     width = w;

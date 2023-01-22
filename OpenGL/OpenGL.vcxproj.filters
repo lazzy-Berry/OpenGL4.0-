@@ -136,6 +136,12 @@
     <Filter Include="ソース ファイル\chapter5\Blur\Shader">
       <UniqueIdentifier>{49f668d1-4f7d-4b4e-8a92-4214ca25083b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5\Bloom">
+      <UniqueIdentifier>{40ab4f5d-ddd5-4a30-a8fd-62e63ab02cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Bloom\Shader">
+      <UniqueIdentifier>{cb0c7ca1-2695-4bcb-b426-a14117646fc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -236,6 +242,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\Blur\SceneBlur.cpp">
       <Filter>ソース ファイル\chapter5\Blur</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\Bloom\SceneBloom.cpp">
+      <Filter>ソース ファイル\chapter5\Bloom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -383,6 +392,12 @@
     <None Include="chapter5\Blur\Shader\BlurShader.frag">
       <Filter>ソース ファイル\chapter5\Blur\Shader</Filter>
     </None>
+    <None Include="chapter5\Bloom\Shader\BloomShader.frag">
+      <Filter>ソース ファイル\chapter5\Bloom\Shader</Filter>
+    </None>
+    <None Include="chapter5\Bloom\Shader\BloomShader.vert">
+      <Filter>ソース ファイル\chapter5\Bloom\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -489,6 +504,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\Blur\SceneBlur.h">
       <Filter>ソース ファイル\chapter5\Blur</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\Bloom\SceneBloom.h">
+      <Filter>ソース ファイル\chapter5\Bloom</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -37,6 +37,7 @@
 #include "chapter4/RenderToTex/SceneRenderToTex.h"
 #include "chapter5/Edge/SceneEdge.h"
 #include "chapter5/Blur/SceneBlur.h"
+#include "chapter5/Bloom/SceneBloom.h"
 
 int main()
 {
@@ -70,8 +71,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ガウスブラーフィルタの適用
-    SceneBlur* scene = new SceneBlur();
+    //ブルーム効果の作成
+    SceneBloom* scene = new SceneBloom();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

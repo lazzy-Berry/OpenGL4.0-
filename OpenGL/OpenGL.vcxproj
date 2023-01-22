@@ -177,6 +177,7 @@
     <ClCompile Include="chapter4\RefractCube\SceneRefractCube.cpp" />
     <ClCompile Include="chapter4\RenderToTex\SceneRenderToTex.cpp" />
     <ClCompile Include="chapter4\UseTexture\SceneTexture.cpp" />
+    <ClCompile Include="chapter5\Bloom\SceneBloom.cpp" />
     <ClCompile Include="chapter5\Blur\SceneBlur.cpp" />
     <ClCompile Include="chapter5\Edge\SceneEdge.cpp" />
     <ClCompile Include="OpenGL.cpp" />
@@ -226,6 +227,8 @@
     <None Include="chapter4\RenderToTex\Shader\RenderToTexShader.vert" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.frag" />
     <None Include="chapter4\UseTexture\Shader\TextureShader.vert" />
+    <None Include="chapter5\Bloom\Shader\BloomShader.frag" />
+    <None Include="chapter5\Bloom\Shader\BloomShader.vert" />
     <None Include="chapter5\Blur\Shader\BlurShader.frag" />
     <None Include="chapter5\Blur\Shader\BlurShader.vert" />
     <None Include="chapter5\Edge\Shader\EdgeShader.frag" />
@@ -265,6 +268,7 @@
     <ClInclude Include="chapter4\RefractCube\SceneRefractCube.h" />
     <ClInclude Include="chapter4\RenderToTex\SceneRenderToTex.h" />
     <ClInclude Include="chapter4\UseTexture\SceneTexture.h" />
+    <ClInclude Include="chapter5\Bloom\SceneBloom.h" />
     <ClInclude Include="chapter5\Blur\SceneBlur.h" />
     <ClInclude Include="chapter5\Edge\SceneEdge.h" />
   </ItemGroup>
