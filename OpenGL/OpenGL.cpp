@@ -41,6 +41,7 @@
 #include "chapter5/Gamma/SceneGamma.h"
 #include "chapter5/MSAA/SceneMSAA.h"
 #include "chapter5/Defferd/SceneDefferd.h"
+#include "chapter6/PointsSprite/ScenePointsSprite.h"
 
 int main()
 {
@@ -74,8 +75,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //遅延シェーディングを使う
-    SceneDefferd* scene = new SceneDefferd();
+    //ジオメトリシェーダーによる点スプライト
+    ScenePointsSprite* scene = new ScenePointsSprite();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

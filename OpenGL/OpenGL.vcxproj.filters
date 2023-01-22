@@ -160,6 +160,15 @@
     <Filter Include="ソース ファイル\chapter5\Defferd\Shader">
       <UniqueIdentifier>{9f2d8aec-cdc2-48d6-b808-7757940c93d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter6">
+      <UniqueIdentifier>{fdc28b64-e14d-40b1-82b2-d01ec4c10fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\PointsSprite">
+      <UniqueIdentifier>{bf561bd2-ae17-4727-b50f-8f3a218e7155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\PointsSprite\Shader">
+      <UniqueIdentifier>{2689a2c1-974f-44b9-bf70-b93ff2d82e5d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -272,6 +281,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\Defferd\SceneDefferd.cpp">
       <Filter>ソース ファイル\chapter5\Defferd</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\PointsSprite\ScenePointsSprite.cpp">
+      <Filter>ソース ファイル\chapter6\PointsSprite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -443,6 +455,15 @@
     <None Include="chapter5\Defferd\Shader\DefferdShader.vert">
       <Filter>ソース ファイル\chapter5\Defferd\Shader</Filter>
     </None>
+    <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.frag">
+      <Filter>ソース ファイル\chapter6\PointsSprite\Shader</Filter>
+    </None>
+    <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.vert">
+      <Filter>ソース ファイル\chapter6\PointsSprite\Shader</Filter>
+    </None>
+    <None Include="chapter6\PointsSprite\Shader\PointsSpriteShader.gs">
+      <Filter>ソース ファイル\chapter6\PointsSprite\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -561,6 +582,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\Defferd\SceneDefferd.h">
       <Filter>ソース ファイル\chapter5\Defferd</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\PointsSprite\ScenePointsSprite.h">
+      <Filter>ソース ファイル\chapter6\PointsSprite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
