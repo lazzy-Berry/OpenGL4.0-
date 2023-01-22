@@ -142,6 +142,12 @@
     <Filter Include="ソース ファイル\chapter5\Bloom\Shader">
       <UniqueIdentifier>{cb0c7ca1-2695-4bcb-b426-a14117646fc3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter5\Gamma">
+      <UniqueIdentifier>{a4139503-ec23-475e-a6c4-a7b69efacf4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter5\Gamma\Shader">
+      <UniqueIdentifier>{9c556cfc-aca5-49a2-a4b5-9ef2ca95bf4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -245,6 +251,9 @@
     </ClCompile>
     <ClCompile Include="chapter5\Bloom\SceneBloom.cpp">
       <Filter>ソース ファイル\chapter5\Bloom</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter5\Gamma\SceneGamma.cpp">
+      <Filter>ソース ファイル\chapter5\Gamma</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -398,6 +407,12 @@
     <None Include="chapter5\Bloom\Shader\BloomShader.vert">
       <Filter>ソース ファイル\chapter5\Bloom\Shader</Filter>
     </None>
+    <None Include="chapter5\Gamma\Shader\GammaShader.frag">
+      <Filter>ソース ファイル\chapter5\Gamma\Shader</Filter>
+    </None>
+    <None Include="chapter5\Gamma\Shader\GammaShader.vert">
+      <Filter>ソース ファイル\chapter5\Gamma\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -507,6 +522,9 @@
     </ClInclude>
     <ClInclude Include="chapter5\Bloom\SceneBloom.h">
       <Filter>ソース ファイル\chapter5\Bloom</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter5\Gamma\SceneGamma.h">
+      <Filter>ソース ファイル\chapter5\Gamma</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

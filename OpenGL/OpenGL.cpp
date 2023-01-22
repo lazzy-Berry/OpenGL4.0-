@@ -38,6 +38,7 @@
 #include "chapter5/Edge/SceneEdge.h"
 #include "chapter5/Blur/SceneBlur.h"
 #include "chapter5/Bloom/SceneBloom.h"
+#include "chapter5/Gamma/SceneGamma.h"
 
 int main()
 {
@@ -71,8 +72,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ブルーム効果の作成
-    SceneBloom* scene = new SceneBloom();
+    //ガンマ補正によるイメージ品質の改善
+    SceneGamma* scene = new SceneGamma();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
