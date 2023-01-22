@@ -175,6 +175,15 @@
     <Filter Include="ソース ファイル\chapter6\ShadeWire\Shader">
       <UniqueIdentifier>{dadd62c0-ee37-4ac2-a19e-0bcfb578b406}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter6\Silhouette">
+      <UniqueIdentifier>{09f3d017-4487-43f3-aa40-b1bdbaa34dd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\Silhouette\Shader">
+      <UniqueIdentifier>{914b6a29-aa02-448d-a3df-62f6977f73e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\Mesh">
+      <UniqueIdentifier>{081edf74-1e44-48ca-8b29-1b741e5a4546}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -293,6 +302,12 @@
     </ClCompile>
     <ClCompile Include="chapter6\ShadeWire\SceneShadeWire.cpp">
       <Filter>ソース ファイル\chapter6\ShadeWire</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\Silhouette\SceneSilhouette.cpp">
+      <Filter>ソース ファイル\chapter6\Silhouette</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\Mesh\vbomeshadj.cpp">
+      <Filter>ソース ファイル\chapter6\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -482,6 +497,15 @@
     <None Include="chapter6\ShadeWire\Shader\ShadeWireShader.vert">
       <Filter>ソース ファイル\chapter6\ShadeWire\Shader</Filter>
     </None>
+    <None Include="chapter6\Silhouette\Shader\SilhouetteShader.frag">
+      <Filter>ソース ファイル\chapter6\Silhouette\Shader</Filter>
+    </None>
+    <None Include="chapter6\Silhouette\Shader\SilhouetteShader.gs">
+      <Filter>ソース ファイル\chapter6\Silhouette\Shader</Filter>
+    </None>
+    <None Include="chapter6\Silhouette\Shader\SilhouetteShader.vert">
+      <Filter>ソース ファイル\chapter6\Silhouette\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -606,6 +630,12 @@
     </ClInclude>
     <ClInclude Include="chapter6\ShadeWire\SceneShadeWire.h">
       <Filter>ソース ファイル\chapter6\ShadeWire</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\Silhouette\SceneSilhouette.h">
+      <Filter>ソース ファイル\chapter6\Silhouette</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\Mesh\vbomeshadj.h">
+      <Filter>ソース ファイル\chapter6\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -43,6 +43,7 @@
 #include "chapter5/Defferd/SceneDefferd.h"
 #include "chapter6/PointsSprite/ScenePointsSprite.h"
 #include "chapter6/ShadeWire/SceneShadeWire.h"
+#include "chapter6/Silhouette/SceneSilhouette.h"
 
 int main()
 {
@@ -76,8 +77,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //シェーディングしたメッシュの上にワイヤフレームを描く
-    SceneShadeWire* scene = new SceneShadeWire();
+    //ジオメトリシェーダーでシルエットラインを描く
+    SceneSilhouette* scene = new SceneSilhouette();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
