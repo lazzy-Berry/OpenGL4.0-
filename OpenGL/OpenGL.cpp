@@ -44,6 +44,7 @@
 #include "chapter6/PointsSprite/ScenePointsSprite.h"
 #include "chapter6/ShadeWire/SceneShadeWire.h"
 #include "chapter6/Silhouette/SceneSilhouette.h"
+#include "chapter6/TessCurve/SceneTessCurve.h"
 
 int main()
 {
@@ -77,8 +78,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ジオメトリシェーダーでシルエットラインを描く
-    SceneSilhouette* scene = new SceneSilhouette();
+    //曲線をテッセレートする
+    SceneTessCurve* scene = new SceneTessCurve();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
