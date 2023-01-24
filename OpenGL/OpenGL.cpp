@@ -46,7 +46,9 @@
 //#include "chapter6/Silhouette/SceneSilhouette.h"
 //#include "chapter6/TessCurve/SceneTessCurve.h"
 //#include "chapter6/QuadTess/SceneQuadTess.h"
-#include "chapter6/TessTeapot/SceneTessTeapot.h"
+//#include "chapter6/TessTeapot/SceneTessTeapot.h"
+#include "chapter6/TessDepth/SceneTessDepth.h"
+
 int main()
 {
     // GLFW初期化
@@ -55,7 +57,7 @@ int main()
         return -1;
     }
     // ウィンドウ生成
-    GLFWwindow* window = glfwCreateWindow(1280, 640, "OpenGL Test", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Test", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -79,14 +81,14 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //3Dサーフェイスをテッセレートする
-    SceneTessTeapot* scene = new SceneTessTeapot();
+    //深度を基にをテッセレートする
+    SceneTessDepth* scene = new SceneTessDepth();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT);
-    scene->resize(1280, 640);
+    scene->resize(800, 600);
 
     // フレームループ
     while (glfwWindowShouldClose(window) == GL_FALSE)

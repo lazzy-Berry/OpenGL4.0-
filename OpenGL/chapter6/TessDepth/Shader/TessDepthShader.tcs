@@ -1,0 +1,31 @@
+#version 400
+
+layout(vertices = 16) out;
+
+uniform int MinTessLevel;
+uniform int MaxTessLevel;
+uniform float MaxDepth;
+uniform float MinDepth;
+uniform mat4 ModelViewMatrix;
+
+void main()
+{
+    //カメラ座標の位置
+    vec4 p = ModelViewMatrix * gl_in[gl_InvocationID].gl_Position;
+
+    //0と1の間にスケールしたかめらからの距離
+    float depth = clamp((abs(p.z) - MinDepth) / (MaxDepth - MinDepth),0.0, 1.0);
+
+    //min/max間テッセレーションレベルを補間
+    float tessLevel = mix(MaxTessLevel, MinTessLevel, depth);
+
+    gl_TessLevelOuter[0] = float(tessLevel);
+    gl_TessLevelOuter[1] = float(tessLevel);
+    gl_TessLevelOuter[2] = float(tessLevel);
+    gl_TessLevelOuter[3] = float(tessLevel);
+
+    gl_TessLevelInner[0] = float(tessLevel);
+    gl_TessLevelInner[1] = float(tessLevel);
+
+    gl_out[gl_InvocationID].gl_Position = gl_in[gl_InvocationID].gl_Position;
+}

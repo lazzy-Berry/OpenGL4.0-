@@ -189,6 +189,7 @@
     <ClCompile Include="chapter6\ShadeWire\SceneShadeWire.cpp" />
     <ClCompile Include="chapter6\Silhouette\SceneSilhouette.cpp" />
     <ClCompile Include="chapter6\TessCurve\SceneTessCurve.cpp" />
+    <ClCompile Include="chapter6\TessDepth\SceneTessDepth.cpp" />
     <ClCompile Include="chapter6\TessTeapot\SceneTessTeapot.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -267,6 +268,11 @@
     <None Include="chapter6\TessCurve\Shader\TessCurveShader.tcs" />
     <None Include="chapter6\TessCurve\Shader\TessCurveShader.tes" />
     <None Include="chapter6\TessCurve\Shader\TessCurveShader.vert" />
+    <None Include="chapter6\TessDepth\Shader\TessDepthShader.frag" />
+    <None Include="chapter6\TessDepth\Shader\TessDepthShader.gs" />
+    <None Include="chapter6\TessDepth\Shader\TessDepthShader.tcs" />
+    <None Include="chapter6\TessDepth\Shader\TessDepthShader.tes" />
+    <None Include="chapter6\TessDepth\Shader\TessDepthShader.vert" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.frag" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.gs" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tcs" />
@@ -319,6 +325,7 @@
     <ClInclude Include="chapter6\ShadeWire\SceneShadeWire.h" />
     <ClInclude Include="chapter6\Silhouette\SceneSilhouette.h" />
     <ClInclude Include="chapter6\TessCurve\SceneTessCurve.h" />
+    <ClInclude Include="chapter6\TessDepth\SceneTessDepth.h" />
     <ClInclude Include="chapter6\TessTeapot\SceneTessTeapot.h" />
   </ItemGroup>
   <ItemGroup>
