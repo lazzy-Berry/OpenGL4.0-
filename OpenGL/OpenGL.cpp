@@ -7,44 +7,45 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include "chapter1/GLShader.hpp"
+//#include "chapter1/GLShader.hpp"
 
 //GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter2/scene.h"
-
-#include "chapter2/ADSScene.h"
-#include "chapter2/SceneTwoSide.h"
-#include "chapter2/FlatScene.h"
-#include "chapter2/SceneSubRoutine.h"
-#include "chapter2/DiscardScene.h"
-#include "chapter3/multiLight/SceneMultiLight.h"
-#include "chapter3/directionalLight/SceneDirectionalLight.h"
-#include "chapter3/PerFragment/ScenePerFragment.h"
-#include "chapter3/SpotLight/SceneSpotLight.h"
-#include "chapter3/Toon/SceneToon.h"
-#include "chapter3/Fog/SceneFog.h"
-#include "chapter4/UseTexture/SceneTexture.h"
-#include "chapter4/MultiTexture/MultiTexture.h"
-#include "chapter4/AlphaTest/SceneAlphaTest.h"
-#include "chapter4/NormalMap/SceneNormalMap.h"
-#include "chapter4/ReflectCube/SceneReflectCube.h"
-#include "chapter4/RefractCube/SceneRefractCube.h"
-#include "chapter4/Projtex/SceneProjtex.h"
-#include "chapter4/RenderToTex/SceneRenderToTex.h"
-#include "chapter5/Edge/SceneEdge.h"
-#include "chapter5/Blur/SceneBlur.h"
-#include "chapter5/Bloom/SceneBloom.h"
-#include "chapter5/Gamma/SceneGamma.h"
-#include "chapter5/MSAA/SceneMSAA.h"
-#include "chapter5/Defferd/SceneDefferd.h"
-#include "chapter6/PointsSprite/ScenePointsSprite.h"
-#include "chapter6/ShadeWire/SceneShadeWire.h"
-#include "chapter6/Silhouette/SceneSilhouette.h"
-#include "chapter6/TessCurve/SceneTessCurve.h"
+//#include "chapter2/scene.h"
+//
+//#include "chapter2/ADSScene.h"
+//#include "chapter2/SceneTwoSide.h"
+//#include "chapter2/FlatScene.h"
+//#include "chapter2/SceneSubRoutine.h"
+//#include "chapter2/DiscardScene.h"
+//#include "chapter3/multiLight/SceneMultiLight.h"
+//#include "chapter3/directionalLight/SceneDirectionalLight.h"
+//#include "chapter3/PerFragment/ScenePerFragment.h"
+//#include "chapter3/SpotLight/SceneSpotLight.h"
+//#include "chapter3/Toon/SceneToon.h"
+//#include "chapter3/Fog/SceneFog.h"
+//#include "chapter4/UseTexture/SceneTexture.h"
+//#include "chapter4/MultiTexture/MultiTexture.h"
+//#include "chapter4/AlphaTest/SceneAlphaTest.h"
+//#include "chapter4/NormalMap/SceneNormalMap.h"
+//#include "chapter4/ReflectCube/SceneReflectCube.h"
+//#include "chapter4/RefractCube/SceneRefractCube.h"
+//#include "chapter4/Projtex/SceneProjtex.h"
+//#include "chapter4/RenderToTex/SceneRenderToTex.h"
+//#include "chapter5/Edge/SceneEdge.h"
+//#include "chapter5/Blur/SceneBlur.h"
+//#include "chapter5/Bloom/SceneBloom.h"
+//#include "chapter5/Gamma/SceneGamma.h"
+//#include "chapter5/MSAA/SceneMSAA.h"
+//#include "chapter5/Defferd/SceneDefferd.h"
+//#include "chapter6/PointsSprite/ScenePointsSprite.h"
+//#include "chapter6/ShadeWire/SceneShadeWire.h"
+//#include "chapter6/Silhouette/SceneSilhouette.h"
+//#include "chapter6/TessCurve/SceneTessCurve.h"
+#include "chapter6/QuadTess/SceneQuadTess.h"
 
 int main()
 {
@@ -78,8 +79,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //曲線をテッセレートする
-    SceneTessCurve* scene = new SceneTessCurve();
+    //2D四角形をテッセレートする
+    SceneQuadTess* scene = new SceneQuadTess();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

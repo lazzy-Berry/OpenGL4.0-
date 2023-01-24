@@ -190,6 +190,12 @@
     <Filter Include="ソース ファイル\chapter6\TessCurve\Shader">
       <UniqueIdentifier>{119371fc-a4f5-4466-9ff7-977c652f5d5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter6\QuadTess">
+      <UniqueIdentifier>{01447f95-1bd6-464f-8431-88422a3f821e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\QuadTess\Shader">
+      <UniqueIdentifier>{c2a5cc08-ca85-440e-a2b7-2863f99924e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -206,9 +212,6 @@
     </ClCompile>
     <ClCompile Include="chapter2\vbotorus.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
-    </ClCompile>
-    <ClCompile Include="chapter1\Glslprogram.cpp">
-      <Filter>ソース ファイル\chapter1</Filter>
     </ClCompile>
     <ClCompile Include="chapter2\ADSScene.cpp">
       <Filter>ソース ファイル\chapter2</Filter>
@@ -320,6 +323,9 @@
     </ClCompile>
     <ClCompile Include="chapter6\Mesh\vboteapotpatch.cpp">
       <Filter>ソース ファイル\chapter6\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\QuadTess\SceneQuadTess.cpp">
+      <Filter>ソース ファイル\chapter6\QuadTess</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -530,6 +536,21 @@
     <None Include="chapter6\TessCurve\Shader\TessCurveShader.tcs">
       <Filter>ソース ファイル\chapter6\TessCurve\Shader</Filter>
     </None>
+    <None Include="chapter6\QuadTess\Shader\QuadTessShader.frag">
+      <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
+    </None>
+    <None Include="chapter6\QuadTess\Shader\QuadTessShader.gs">
+      <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
+    </None>
+    <None Include="chapter6\QuadTess\Shader\QuadTessShader.tcs">
+      <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
+    </None>
+    <None Include="chapter6\QuadTess\Shader\QuadTessShader.tes">
+      <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
+    </None>
+    <None Include="chapter6\QuadTess\Shader\QuadTessShader.vert">
+      <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -549,9 +570,6 @@
     </ClInclude>
     <ClInclude Include="chapter2\defines.h">
       <Filter>ソース ファイル\chapter2</Filter>
-    </ClInclude>
-    <ClInclude Include="chapter1\Glslprogram.h">
-      <Filter>ソース ファイル\chapter1</Filter>
     </ClInclude>
     <ClInclude Include="chapter2\ADSScene.h">
       <Filter>ソース ファイル\chapter2</Filter>
@@ -666,6 +684,9 @@
     </ClInclude>
     <ClInclude Include="chapter6\Mesh\vboteapotpatch.h">
       <Filter>ソース ファイル\chapter6\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\QuadTess\SceneQuadTess.h">
+      <Filter>ソース ファイル\chapter6\QuadTess</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
