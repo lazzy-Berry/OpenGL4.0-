@@ -196,6 +196,12 @@
     <Filter Include="ソース ファイル\chapter6\QuadTess\Shader">
       <UniqueIdentifier>{c2a5cc08-ca85-440e-a2b7-2863f99924e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter6\TessTeapot">
+      <UniqueIdentifier>{5b3bf3ed-3ec1-4c2d-a767-def9e70f55a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter6\TessTeapot\Shader">
+      <UniqueIdentifier>{c892d033-a465-4a39-aea2-2e6111a964a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -326,6 +332,9 @@
     </ClCompile>
     <ClCompile Include="chapter6\QuadTess\SceneQuadTess.cpp">
       <Filter>ソース ファイル\chapter6\QuadTess</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter6\TessTeapot\SceneTessTeapot.cpp">
+      <Filter>ソース ファイル\chapter6\TessTeapot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -551,6 +560,21 @@
     <None Include="chapter6\QuadTess\Shader\QuadTessShader.vert">
       <Filter>ソース ファイル\chapter6\QuadTess\Shader</Filter>
     </None>
+    <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.frag">
+      <Filter>ソース ファイル\chapter6\TessTeapot\Shader</Filter>
+    </None>
+    <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.gs">
+      <Filter>ソース ファイル\chapter6\TessTeapot\Shader</Filter>
+    </None>
+    <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tcs">
+      <Filter>ソース ファイル\chapter6\TessTeapot\Shader</Filter>
+    </None>
+    <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tes">
+      <Filter>ソース ファイル\chapter6\TessTeapot\Shader</Filter>
+    </None>
+    <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.vert">
+      <Filter>ソース ファイル\chapter6\TessTeapot\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -687,6 +711,9 @@
     </ClInclude>
     <ClInclude Include="chapter6\QuadTess\SceneQuadTess.h">
       <Filter>ソース ファイル\chapter6\QuadTess</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter6\TessTeapot\SceneTessTeapot.h">
+      <Filter>ソース ファイル\chapter6\TessTeapot</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

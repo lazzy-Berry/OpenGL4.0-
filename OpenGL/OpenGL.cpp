@@ -45,8 +45,8 @@
 //#include "chapter6/ShadeWire/SceneShadeWire.h"
 //#include "chapter6/Silhouette/SceneSilhouette.h"
 //#include "chapter6/TessCurve/SceneTessCurve.h"
-#include "chapter6/QuadTess/SceneQuadTess.h"
-
+//#include "chapter6/QuadTess/SceneQuadTess.h"
+#include "chapter6/TessTeapot/SceneTessTeapot.h"
 int main()
 {
     // GLFW初期化
@@ -79,8 +79,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //2D四角形をテッセレートする
-    SceneQuadTess* scene = new SceneQuadTess();
+    //3Dサーフェイスをテッセレートする
+    SceneTessTeapot* scene = new SceneTessTeapot();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
