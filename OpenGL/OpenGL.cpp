@@ -47,7 +47,8 @@
 //#include "chapter6/TessCurve/SceneTessCurve.h"
 //#include "chapter6/QuadTess/SceneQuadTess.h"
 //#include "chapter6/TessTeapot/SceneTessTeapot.h"
-#include "chapter6/TessDepth/SceneTessDepth.h"
+//#include "chapter6/TessDepth/SceneTessDepth.h"
+#include "chapter7/ShadowMap/SceneShadowMap.h"
 
 int main()
 {
@@ -81,8 +82,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //深度を基にをテッセレートする
-    SceneTessDepth* scene = new SceneTessDepth();
+    //シャドウマップによる影のレンダリング
+    SceneShadowMap* scene = new SceneShadowMap();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

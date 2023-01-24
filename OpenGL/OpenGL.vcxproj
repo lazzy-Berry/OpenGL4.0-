@@ -191,6 +191,8 @@
     <ClCompile Include="chapter6\TessCurve\SceneTessCurve.cpp" />
     <ClCompile Include="chapter6\TessDepth\SceneTessDepth.cpp" />
     <ClCompile Include="chapter6\TessTeapot\SceneTessTeapot.cpp" />
+    <ClCompile Include="chapter7\frustum.cpp" />
+    <ClCompile Include="chapter7\ShadowMap\SceneShadowMap.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +280,10 @@
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tcs" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tes" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.vert" />
+    <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.frag" />
+    <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.vert" />
+    <None Include="chapter7\ShadowMap\Shader\SolidShader.frag" />
+    <None Include="chapter7\ShadowMap\Shader\SolidShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -327,6 +333,8 @@
     <ClInclude Include="chapter6\TessCurve\SceneTessCurve.h" />
     <ClInclude Include="chapter6\TessDepth\SceneTessDepth.h" />
     <ClInclude Include="chapter6\TessTeapot\SceneTessTeapot.h" />
+    <ClInclude Include="chapter7\frustum.h" />
+    <ClInclude Include="chapter7\ShadowMap\SceneShadowMap.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="chapter4\Texture\brick1.jpg" />

@@ -208,6 +208,15 @@
     <Filter Include="ソース ファイル\chapter6\TessDepth\Shader">
       <UniqueIdentifier>{f840946b-0e80-4434-9a15-8eebd04d12cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter7">
+      <UniqueIdentifier>{d61d46e6-d716-4dbc-8146-5349759c2aa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter7\ShadowMap">
+      <UniqueIdentifier>{0825cf24-6fa6-4193-8e79-fb201b6a1a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter7\ShadowMap\Shader">
+      <UniqueIdentifier>{7b440614-a593-444d-b601-5ac325ad92b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -344,6 +353,12 @@
     </ClCompile>
     <ClCompile Include="chapter6\TessDepth\SceneTessDepth.cpp">
       <Filter>ソース ファイル\chapter6\TessDepth</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\ShadowMap\SceneShadowMap.cpp">
+      <Filter>ソース ファイル\chapter7\ShadowMap</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\frustum.cpp">
+      <Filter>ソース ファイル\chapter7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -599,6 +614,18 @@
     <None Include="chapter6\TessDepth\Shader\TessDepthShader.vert">
       <Filter>ソース ファイル\chapter6\TessDepth\Shader</Filter>
     </None>
+    <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.frag">
+      <Filter>ソース ファイル\chapter7\ShadowMap\Shader</Filter>
+    </None>
+    <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.vert">
+      <Filter>ソース ファイル\chapter7\ShadowMap\Shader</Filter>
+    </None>
+    <None Include="chapter7\ShadowMap\Shader\SolidShader.frag">
+      <Filter>ソース ファイル\chapter7\ShadowMap\Shader</Filter>
+    </None>
+    <None Include="chapter7\ShadowMap\Shader\SolidShader.vert">
+      <Filter>ソース ファイル\chapter7\ShadowMap\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -741,6 +768,12 @@
     </ClInclude>
     <ClInclude Include="chapter6\TessDepth\SceneTessDepth.h">
       <Filter>ソース ファイル\chapter6\TessDepth</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\ShadowMap\SceneShadowMap.h">
+      <Filter>ソース ファイル\chapter7\ShadowMap</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\frustum.h">
+      <Filter>ソース ファイル\chapter7</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
