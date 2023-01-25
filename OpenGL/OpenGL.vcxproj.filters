@@ -217,6 +217,12 @@
     <Filter Include="ソース ファイル\chapter7\ShadowMap\Shader">
       <UniqueIdentifier>{7b440614-a593-444d-b601-5ac325ad92b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter7\Pcf">
+      <UniqueIdentifier>{eb6a4f62-17c5-446b-922d-11efcd8c9565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter7\Pcf\Shader">
+      <UniqueIdentifier>{f23ccc44-f064-4935-aeb3-5eba086cd00e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -359,6 +365,9 @@
     </ClCompile>
     <ClCompile Include="chapter7\frustum.cpp">
       <Filter>ソース ファイル\chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\Pcf\ScenePcf.cpp">
+      <Filter>ソース ファイル\chapter7\Pcf</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -626,6 +635,12 @@
     <None Include="chapter7\ShadowMap\Shader\SolidShader.vert">
       <Filter>ソース ファイル\chapter7\ShadowMap\Shader</Filter>
     </None>
+    <None Include="chapter7\Pcf\Shader\PcfShader.frag">
+      <Filter>ソース ファイル\chapter7\Pcf\Shader</Filter>
+    </None>
+    <None Include="chapter7\Pcf\Shader\PcfShader.vert">
+      <Filter>ソース ファイル\chapter7\Pcf\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -774,6 +789,9 @@
     </ClInclude>
     <ClInclude Include="chapter7\frustum.h">
       <Filter>ソース ファイル\chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\Pcf\ScenePcf.h">
+      <Filter>ソース ファイル\chapter7\Pcf</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

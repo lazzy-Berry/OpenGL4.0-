@@ -48,7 +48,8 @@
 //#include "chapter6/QuadTess/SceneQuadTess.h"
 //#include "chapter6/TessTeapot/SceneTessTeapot.h"
 //#include "chapter6/TessDepth/SceneTessDepth.h"
-#include "chapter7/ShadowMap/SceneShadowMap.h"
+//#include "chapter7/ShadowMap/SceneShadowMap.h"
+#include "chapter7/Pcf/ScenePcf.h"
 
 int main()
 {
@@ -82,8 +83,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //シャドウマップによる影のレンダリング
-    SceneShadowMap* scene = new SceneShadowMap();
+    //PCFによる影のエッジのアンチエイリアシング
+    ScenePcf* scene = new ScenePcf();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

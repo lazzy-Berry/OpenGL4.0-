@@ -192,6 +192,7 @@
     <ClCompile Include="chapter6\TessDepth\SceneTessDepth.cpp" />
     <ClCompile Include="chapter6\TessTeapot\SceneTessTeapot.cpp" />
     <ClCompile Include="chapter7\frustum.cpp" />
+    <ClCompile Include="chapter7\Pcf\ScenePcf.cpp" />
     <ClCompile Include="chapter7\ShadowMap\SceneShadowMap.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -280,6 +281,8 @@
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tcs" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.tes" />
     <None Include="chapter6\TessTeapot\Shader\TessTeapotShader.vert" />
+    <None Include="chapter7\Pcf\Shader\PcfShader.frag" />
+    <None Include="chapter7\Pcf\Shader\PcfShader.vert" />
     <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.frag" />
     <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.vert" />
     <None Include="chapter7\ShadowMap\Shader\SolidShader.frag" />
@@ -334,6 +337,7 @@
     <ClInclude Include="chapter6\TessDepth\SceneTessDepth.h" />
     <ClInclude Include="chapter6\TessTeapot\SceneTessTeapot.h" />
     <ClInclude Include="chapter7\frustum.h" />
+    <ClInclude Include="chapter7\Pcf\ScenePcf.h" />
     <ClInclude Include="chapter7\ShadowMap\SceneShadowMap.h" />
   </ItemGroup>
   <ItemGroup>
