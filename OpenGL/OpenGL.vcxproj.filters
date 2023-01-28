@@ -229,6 +229,12 @@
     <Filter Include="ソース ファイル\chapter7\Jitter\Shader">
       <UniqueIdentifier>{0c2bf465-a9c9-44c8-8ec0-d9ade950d19d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter7\Eao">
+      <UniqueIdentifier>{13d7aa13-9854-453f-8da2-a116e4c77534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter7\Eao\Shader">
+      <UniqueIdentifier>{5521cc5b-46d9-49b5-99bf-307971efe315}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -380,6 +386,9 @@
     </ClCompile>
     <ClCompile Include="chapter4\Mesh\VBOMesh.cpp">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\Eao\SceneEao.cpp">
+      <Filter>ソース ファイル\chapter7\Eao</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -659,6 +668,12 @@
     <None Include="chapter7\Jitter\Shader\JitterShader.vert">
       <Filter>ソース ファイル\chapter7\Jitter\Shader</Filter>
     </None>
+    <None Include="chapter7\Eao\Shader\EaoShader.frag">
+      <Filter>ソース ファイル\chapter7\Eao\Shader</Filter>
+    </None>
+    <None Include="chapter7\Eao\Shader\EaoShader.vert">
+      <Filter>ソース ファイル\chapter7\Eao\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -816,6 +831,9 @@
     </ClInclude>
     <ClInclude Include="chapter4\Mesh\VBOMesh.h">
       <Filter>ソース ファイル\chapter4\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\Eao\SceneEao.h">
+      <Filter>ソース ファイル\chapter7\Eao</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

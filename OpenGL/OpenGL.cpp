@@ -50,7 +50,8 @@
 //#include "chapter6/TessDepth/SceneTessDepth.h"
 //#include "chapter7/ShadowMap/SceneShadowMap.h"
 //#include "chapter7/Pcf/ScenePcf.h"
-#include "chapter7/Jitter/SceneJitter.h"
+//#include "chapter7/Jitter/SceneJitter.h"
+#include "chapter7/Eao/SceneEao.h"
 
 int main()
 {
@@ -84,8 +85,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //ランダムサンプリングでソフトな影のエッジを作り出す
-    SceneJitter* scene = new SceneJitter();
+    //プリベークト　アンビエント　オクルージョンによるリアリズムの改善
+    SceneEao* scene = new SceneEao();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
