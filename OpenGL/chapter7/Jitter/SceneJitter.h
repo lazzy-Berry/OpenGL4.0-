@@ -1,6 +1,6 @@
 ﻿#pragma once
-#ifndef SCENEPcf_H
-#define SCENEPcf_H
+#ifndef SCENEJitter_H
+#define SCENEJitter_H
 
 #include "../../chapter2/glslprogram.h"
 #include "../../chapter2/vbotorus.h"
@@ -21,10 +21,10 @@
 #include <glm/glm.hpp>
 using glm::mat4;
 
-class ScenePcf
+class SceneJitter
 {
 private:
-    GLSLProgram prog, solidProg;
+    GLSLProgram prog;
     GLuint shadowFBO, pass1Index, pass2Index;
 
     TeaPot* teapot;
@@ -33,11 +33,14 @@ private:
     VBOMesh7* mesh;
 
     int width, height;
+    int samplesU, samplesV;
+    int jitterMapSize;
+    float radius;
     int shadowMapWidth, shadowMapHeight;
 
     mat4 model, view, projection;
     mat4 lightView,lightProjection,lightPV;
-    mat4 shadowBias;
+    mat4 shadowScale;
     vec3 lightPos;
     float angle;
 
@@ -48,9 +51,11 @@ private:
     void setupFBO();
     void drawScene();
     void drawBuildingScene();
+    float jitter();
+    void buildJitterTex();
 
 public:
-    ScenePcf();
+    SceneJitter();
 
     void initScene();
     void render();

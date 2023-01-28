@@ -49,7 +49,8 @@
 //#include "chapter6/TessTeapot/SceneTessTeapot.h"
 //#include "chapter6/TessDepth/SceneTessDepth.h"
 //#include "chapter7/ShadowMap/SceneShadowMap.h"
-#include "chapter7/Pcf/ScenePcf.h"
+//#include "chapter7/Pcf/ScenePcf.h"
+#include "chapter7/Jitter/SceneJitter.h"
 
 int main()
 {
@@ -83,8 +84,8 @@ int main()
     double  prev = glfwGetTime();
     const  double  TIME = 0.1;
 
-    //PCFによる影のエッジのアンチエイリアシング
-    ScenePcf* scene = new ScenePcf();
+    //ランダムサンプリングでソフトな影のエッジを作り出す
+    SceneJitter* scene = new SceneJitter();
 
     scene->initScene();
     glClearColor(0.2f, 0.2f, 0.2f, 0.0f);

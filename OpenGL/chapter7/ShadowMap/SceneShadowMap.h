@@ -9,7 +9,7 @@
 #include "../../chapter4/Mesh/VBOCube.h"
 #include "../../chapter4/loadImage.h"
 #include <stdio.h>
-#include "../../chapter4/Mesh/VBOMesh.h"
+//#include "../../chapter4/Mesh/VBOMesh.h"
 #include "../../chapter4/Mesh/SkyBox.h"
 #include "../frustum.h"
 

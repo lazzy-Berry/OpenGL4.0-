@@ -223,6 +223,12 @@
     <Filter Include="ソース ファイル\chapter7\Pcf\Shader">
       <UniqueIdentifier>{f23ccc44-f064-4935-aeb3-5eba086cd00e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter7\Jitter">
+      <UniqueIdentifier>{52844181-c875-4562-9b7f-d5e58b944d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter7\Jitter\Shader">
+      <UniqueIdentifier>{0c2bf465-a9c9-44c8-8ec0-d9ade950d19d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -297,9 +303,6 @@
     <ClCompile Include="chapter4\NormalMap\SceneNormalMap.cpp">
       <Filter>ソース ファイル\chapter4\NormalMap</Filter>
     </ClCompile>
-    <ClCompile Include="chapter4\Mesh\VBOMesh.cpp">
-      <Filter>ソース ファイル\chapter4\Mesh</Filter>
-    </ClCompile>
     <ClCompile Include="chapter4\ReflectCube\SceneReflectCube.cpp">
       <Filter>ソース ファイル\chapter4\ReflectCube</Filter>
     </ClCompile>
@@ -368,6 +371,15 @@
     </ClCompile>
     <ClCompile Include="chapter7\Pcf\ScenePcf.cpp">
       <Filter>ソース ファイル\chapter7\Pcf</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\Jitter\SceneJitter.cpp">
+      <Filter>ソース ファイル\chapter7\Jitter</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter7\VBOMesh7.cpp">
+      <Filter>ソース ファイル\chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter4\Mesh\VBOMesh.cpp">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -641,6 +653,12 @@
     <None Include="chapter7\Pcf\Shader\PcfShader.vert">
       <Filter>ソース ファイル\chapter7\Pcf\Shader</Filter>
     </None>
+    <None Include="chapter7\Jitter\Shader\JitterShader.frag">
+      <Filter>ソース ファイル\chapter7\Jitter\Shader</Filter>
+    </None>
+    <None Include="chapter7\Jitter\Shader\JitterShader.vert">
+      <Filter>ソース ファイル\chapter7\Jitter\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -721,9 +739,6 @@
     <ClInclude Include="chapter4\NormalMap\SceneNormalMap.h">
       <Filter>ソース ファイル\chapter4\NormalMap</Filter>
     </ClInclude>
-    <ClInclude Include="chapter4\Mesh\VBOMesh.h">
-      <Filter>ソース ファイル\chapter4\Mesh</Filter>
-    </ClInclude>
     <ClInclude Include="chapter4\ReflectCube\SceneReflectCube.h">
       <Filter>ソース ファイル\chapter4\ReflectCube</Filter>
     </ClInclude>
@@ -792,6 +807,15 @@
     </ClInclude>
     <ClInclude Include="chapter7\Pcf\ScenePcf.h">
       <Filter>ソース ファイル\chapter7\Pcf</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\Jitter\SceneJitter.h">
+      <Filter>ソース ファイル\chapter7\Jitter</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter7\VBOMesh7.h">
+      <Filter>ソース ファイル\chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter4\Mesh\VBOMesh.h">
+      <Filter>ソース ファイル\chapter4\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
