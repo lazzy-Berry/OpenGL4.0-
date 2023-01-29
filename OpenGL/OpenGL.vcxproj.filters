@@ -256,6 +256,12 @@
     <Filter Include="ソース ファイル\chapter8\Decay\Shader">
       <UniqueIdentifier>{7f22f90d-6061-4b78-9f7b-3827ff51108e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter8\NightVision">
+      <UniqueIdentifier>{23cc899f-2055-43b0-b643-3d4afac524f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter8\NightVision\Shader">
+      <UniqueIdentifier>{efbe0c0a-2f21-4af8-8480-880a0bd4d7d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -428,6 +434,9 @@
     </ClCompile>
     <ClCompile Include="chapter8\Decay\SceneDecay.cpp">
       <Filter>ソース ファイル\chapter8\Decay</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\NightVision\SceneNightVision.cpp">
+      <Filter>ソース ファイル\chapter8\NightVision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -725,6 +734,12 @@
     <None Include="chapter8\Decay\Shader\DecayShader.vert">
       <Filter>ソース ファイル\chapter8\Decay\Shader</Filter>
     </None>
+    <None Include="chapter8\NightVision\Shader\NightVisionShader.frag">
+      <Filter>ソース ファイル\chapter8\NightVision\Shader</Filter>
+    </None>
+    <None Include="chapter8\NightVision\Shader\NightVisionShader.vert">
+      <Filter>ソース ファイル\chapter8\NightVision\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -903,6 +918,9 @@
     </ClInclude>
     <ClInclude Include="chapter8\Decay\SceneDecay.h">
       <Filter>ソース ファイル\chapter8\Decay</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\NightVision\SceneNightVision.h">
+      <Filter>ソース ファイル\chapter8\NightVision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

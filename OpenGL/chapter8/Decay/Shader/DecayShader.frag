@@ -18,19 +18,19 @@ in vec4 Position;
 in vec3 Normal;
 in vec2 TexCoord;
 
-uniform float LowThreshold;
-uniform float HighThreshold;
+uniform vec3 PaintColor = vec3(1.0);
+uniform float Threshold = 0.65;
 
 layout ( location = 0 ) out vec4 FragColor;
 
-vec3 phongModel() {
+vec3 phongModel(vec3 kd) {
     vec3 n = Normal;
     if( !gl_FrontFacing ) n = -n;
     vec3 s = normalize(Light.Position.xyz - Position.xyz);
     vec3 v = normalize(-Position.xyz);
     vec3 r = reflect( -s, n );
     float sDotN = max( dot(s,n), 0.0 );
-    vec3 diffuse = Light.Intensity * Material.Kd * sDotN;
+    vec3 diffuse = Light.Intensity * kd * sDotN;
     vec3 spec = vec3(0.0);
     if( sDotN > 0.0 )
         spec = Light.Intensity * Material.Ks *
@@ -42,11 +42,9 @@ vec3 phongModel() {
 void main()
 {
     vec4 noise = texture( NoiseTex, TexCoord );
-    
-    if(noise.a < LowThreshold) discard;
-    if(noise.a > HighThreshold) discard;
+    vec3 color = Material.Kd;
+    if( noise.g > Threshold ) color = PaintColor;
 
-    vec3 color = phongModel();
-    FragColor = vec4( color , 1.0 );
+    FragColor = vec4( phongModel(color) , 1.0 );
 }
 
