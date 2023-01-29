@@ -204,6 +204,7 @@
     <ClCompile Include="chapter8\PaintSpatter\ScenePaintSpatter.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp" />
+    <ClCompile Include="chapter9\Wave\SceneWave.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +308,8 @@
     <None Include="chapter8\Decay\Shader\DecayShader.vert" />
     <None Include="chapter8\NightVision\Shader\NightVisionShader.frag" />
     <None Include="chapter8\NightVision\Shader\NightVisionShader.vert" />
+    <None Include="chapter9\Wave\Shader\WaveShader.frag" />
+    <None Include="chapter9\Wave\Shader\WaveShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -369,6 +372,7 @@
     <ClInclude Include="chapter8\PaintSpatter\ScenePaintSpatter.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h" />
+    <ClInclude Include="chapter9\Wave\SceneWave.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="chapter4\Texture\brick1.jpg" />

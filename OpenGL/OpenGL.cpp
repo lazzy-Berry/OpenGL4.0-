@@ -15,9 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter8/NightVision/SceneNightVision.h"
+#include "chapter9/Wave/SceneWave.h"
 
-SceneNightVision* scene;
+SceneWave* scene;
 
 void display(void)
 {
@@ -33,9 +33,16 @@ void idle(void)
 void Init() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    scene = new SceneNightVision();
+    scene = new SceneWave();
     scene->initScene();
     scene->resize(320, 320);
+}
+
+void timer(int value) {
+    std::cout << value << std::endl;
+    scene->update(1);
+    glutPostRedisplay();
+    glutTimerFunc(100, timer, 0);
 }
 
 int main(int argc, char* argv[])
@@ -54,7 +61,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-    glutCreateWindow("暗視効果の作成");
+    glutCreateWindow("頂点変異によるサーフェイスのアニメーション");
 
     // GLEW初期化
     if (glewInit() != GLEW_OK)
@@ -64,6 +71,7 @@ int main(int argc, char* argv[])
 
     glutDisplayFunc(display);
     glutIdleFunc(idle);
+    glutTimerFunc(100, timer, 0);
 
     Init();
     glutMainLoop();

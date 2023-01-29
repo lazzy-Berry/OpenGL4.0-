@@ -262,6 +262,15 @@
     <Filter Include="ソース ファイル\chapter8\NightVision\Shader">
       <UniqueIdentifier>{efbe0c0a-2f21-4af8-8480-880a0bd4d7d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter9">
+      <UniqueIdentifier>{8851e58e-ebf5-4d6b-a3ea-b8822820fbb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter9\Wave">
+      <UniqueIdentifier>{88f50780-0ef5-4580-b8d6-8d22a337097e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter9\Wave\Shader">
+      <UniqueIdentifier>{47ecbfd7-260d-4d6f-953f-2a8d361b4712}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -437,6 +446,9 @@
     </ClCompile>
     <ClCompile Include="chapter8\NightVision\SceneNightVision.cpp">
       <Filter>ソース ファイル\chapter8\NightVision</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter9\Wave\SceneWave.cpp">
+      <Filter>ソース ファイル\chapter9\Wave</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -740,6 +752,12 @@
     <None Include="chapter8\NightVision\Shader\NightVisionShader.vert">
       <Filter>ソース ファイル\chapter8\NightVision\Shader</Filter>
     </None>
+    <None Include="chapter9\Wave\Shader\WaveShader.frag">
+      <Filter>ソース ファイル\chapter9\Wave\Shader</Filter>
+    </None>
+    <None Include="chapter9\Wave\Shader\WaveShader.vert">
+      <Filter>ソース ファイル\chapter9\Wave\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -921,6 +939,9 @@
     </ClInclude>
     <ClInclude Include="chapter8\NightVision\SceneNightVision.h">
       <Filter>ソース ファイル\chapter8\NightVision</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter9\Wave\SceneWave.h">
+      <Filter>ソース ファイル\chapter9\Wave</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
