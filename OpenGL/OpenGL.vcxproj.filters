@@ -271,6 +271,12 @@
     <Filter Include="ソース ファイル\chapter9\Wave\Shader">
       <UniqueIdentifier>{47ecbfd7-260d-4d6f-953f-2a8d361b4712}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter9\Particle">
+      <UniqueIdentifier>{349597a1-073f-452b-a63c-de5c341e0aca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter9\Particle\Shader">
+      <UniqueIdentifier>{03328be2-b8db-4c19-b954-2a664fcf1bc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -449,6 +455,9 @@
     </ClCompile>
     <ClCompile Include="chapter9\Wave\SceneWave.cpp">
       <Filter>ソース ファイル\chapter9\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter9\Particle\SceneParticle.cpp">
+      <Filter>ソース ファイル\chapter9\Particle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -758,6 +767,12 @@
     <None Include="chapter9\Wave\Shader\WaveShader.vert">
       <Filter>ソース ファイル\chapter9\Wave\Shader</Filter>
     </None>
+    <None Include="chapter9\Particle\Shader\ParticleShader.frag">
+      <Filter>ソース ファイル\chapter9\Particle\Shader</Filter>
+    </None>
+    <None Include="chapter9\Particle\Shader\ParticleShader.vert">
+      <Filter>ソース ファイル\chapter9\Particle\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -942,6 +957,9 @@
     </ClInclude>
     <ClInclude Include="chapter9\Wave\SceneWave.h">
       <Filter>ソース ファイル\chapter9\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter9\Particle\SceneParticle.h">
+      <Filter>ソース ファイル\chapter9\Particle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
