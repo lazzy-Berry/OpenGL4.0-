@@ -235,6 +235,12 @@
     <Filter Include="ソース ファイル\chapter7\Eao\Shader">
       <UniqueIdentifier>{5521cc5b-46d9-49b5-99bf-307971efe315}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter8">
+      <UniqueIdentifier>{68d50be7-3848-4bb0-92cb-ba71a23e4124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter8\Noise">
+      <UniqueIdentifier>{dbd00bbc-b47e-4863-afe4-d0c713df47b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -389,6 +395,12 @@
     </ClCompile>
     <ClCompile Include="chapter7\Eao\SceneEao.cpp">
       <Filter>ソース ファイル\chapter7\Eao</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\Noise\NoiseTex.cpp">
+      <Filter>ソース ファイル\chapter8\Noise</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\Noise\SceneNoiseTex.cpp">
+      <Filter>ソース ファイル\chapter8\Noise</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -834,6 +846,12 @@
     </ClInclude>
     <ClInclude Include="chapter7\Eao\SceneEao.h">
       <Filter>ソース ファイル\chapter7\Eao</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\Noise\NoiseTex.h">
+      <Filter>ソース ファイル\chapter8\Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\Noise\SceneNoiseTex.h">
+      <Filter>ソース ファイル\chapter8\Noise</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

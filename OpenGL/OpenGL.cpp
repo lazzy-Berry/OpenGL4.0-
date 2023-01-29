@@ -1,4 +1,5 @@
 ﻿
+
 #include <GL/glew.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -7,122 +8,46 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-//#include "chapter1/GLShader.hpp"
+#include <freeglut.h>
 
 //GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-//#include "chapter2/scene.h"
-//
-//#include "chapter2/ADSScene.h"
-//#include "chapter2/SceneTwoSide.h"
-//#include "chapter2/FlatScene.h"
-//#include "chapter2/SceneSubRoutine.h"
-//#include "chapter2/DiscardScene.h"
-//#include "chapter3/multiLight/SceneMultiLight.h"
-//#include "chapter3/directionalLight/SceneDirectionalLight.h"
-//#include "chapter3/PerFragment/ScenePerFragment.h"
-//#include "chapter3/SpotLight/SceneSpotLight.h"
-//#include "chapter3/Toon/SceneToon.h"
-//#include "chapter3/Fog/SceneFog.h"
-//#include "chapter4/UseTexture/SceneTexture.h"
-//#include "chapter4/MultiTexture/MultiTexture.h"
-//#include "chapter4/AlphaTest/SceneAlphaTest.h"
-//#include "chapter4/NormalMap/SceneNormalMap.h"
-//#include "chapter4/ReflectCube/SceneReflectCube.h"
-//#include "chapter4/RefractCube/SceneRefractCube.h"
-//#include "chapter4/Projtex/SceneProjtex.h"
-//#include "chapter4/RenderToTex/SceneRenderToTex.h"
-//#include "chapter5/Edge/SceneEdge.h"
-//#include "chapter5/Blur/SceneBlur.h"
-//#include "chapter5/Bloom/SceneBloom.h"
-//#include "chapter5/Gamma/SceneGamma.h"
-//#include "chapter5/MSAA/SceneMSAA.h"
-//#include "chapter5/Defferd/SceneDefferd.h"
-//#include "chapter6/PointsSprite/ScenePointsSprite.h"
-//#include "chapter6/ShadeWire/SceneShadeWire.h"
-//#include "chapter6/Silhouette/SceneSilhouette.h"
-//#include "chapter6/TessCurve/SceneTessCurve.h"
-//#include "chapter6/QuadTess/SceneQuadTess.h"
-//#include "chapter6/TessTeapot/SceneTessTeapot.h"
-//#include "chapter6/TessDepth/SceneTessDepth.h"
-//#include "chapter7/ShadowMap/SceneShadowMap.h"
-//#include "chapter7/Pcf/ScenePcf.h"
-//#include "chapter7/Jitter/SceneJitter.h"
-#include "chapter7/Eao/SceneEao.h"
+#include "chapter8/Noise/SceneNoiseTex.h"
 
-int main()
+SceneNoiseTex* scene;
+
+void display(void)
 {
-    // GLFW初期化
-    if (glfwInit() == GL_FALSE)
-    {
-        return -1;
-    }
-    // ウィンドウ生成
-    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Test", NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
-    // バージョン2.1指定
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    scene->render();
+}
 
-    glfwMakeContextCurrent(window);
-    glfwSwapInterval(0);
+void idle(void)
+{
+    glutPostRedisplay();
+}
 
-
-    // GLEW初期化
-    if (glewInit() != GLEW_OK)
-    {
-        return -1;
-    }
-
-    //timer用
-    double  prev = glfwGetTime();
-    const  double  TIME = 0.1;
-
-    //プリベークト　アンビエント　オクルージョンによるリアリズムの改善
-    SceneEao* scene = new SceneEao();
-
+void Init() {
+    glClearColor(0.0, 0.0, 0.0, 1.0);
+    
+    scene = new SceneNoiseTex();
     scene->initScene();
-    glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
-    glEnable(GL_DEPTH_TEST);
-    glClear(GL_COLOR_BUFFER_BIT);
-    scene->resize(800, 600);
+}
 
-    // フレームループ
-    while (glfwWindowShouldClose(window) == GL_FALSE)
-    {
-        // バッファのクリア
-        glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        scene->render();
-
-        //Timerイベント
-        double  now = glfwGetTime();
-        if (now - prev > TIME)
-        {
-            prev = now;
-            scene->update(TIME);
-        }
-
-        // ダブルバッファのスワップ
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-
-    delete scene;
-    //glDeleteVertexArrays(1, &VAO);
-    //glDeleteBuffers(1, &VBO);
-
-    // GLFWの終了処理
-    glfwTerminate();
-
+int main(int argc, char* argv[])
+{
+    glutInitWindowPosition(320, 320);
+    glutInitWindowSize(320, 320);
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
+    glutCreateWindow("libnoiseによるノイズテクスチャの作成");
+    glutDisplayFunc(display);
+    glutIdleFunc(idle);
+    Init();
+    glutMainLoop();
     return 0;
+
 };
 
