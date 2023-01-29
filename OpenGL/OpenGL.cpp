@@ -15,13 +15,14 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter8/SeamlessNoise/SceneSeamlessNoiseTex.h"
+#include "chapter8/PaintSpatter/ScenePaintSpatter.h"
 
-SceneSeamlessNoiseTex* scene;
+ScenePaintSpatter* scene;
 
 void display(void)
 {
     scene->render();
+    glutSwapBuffers();
 }
 
 void idle(void)
@@ -32,21 +33,42 @@ void idle(void)
 void Init() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    scene = new SceneSeamlessNoiseTex();
+    scene = new ScenePaintSpatter();
     scene->initScene();
+    scene->resize(320, 320);
 }
 
 int main(int argc, char* argv[])
 {
+    // GLFW初期化
+    if (glfwInit() == GL_FALSE)
+    {
+        return -1;
+    }
+    // バージョン2.1指定
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    glfwSwapInterval(0);
+
     glutInitWindowPosition(320, 320);
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-    glutCreateWindow("シームレスなノイズテクスチャの作成");
+    glutCreateWindow("ペイント・スパッター効果の作成");
+
+    // GLEW初期化
+    if (glewInit() != GLEW_OK)
+    {
+        return -1;
+    }
+
     glutDisplayFunc(display);
     glutIdleFunc(idle);
+
     Init();
     glutMainLoop();
+
+
     return 0;
 
 };

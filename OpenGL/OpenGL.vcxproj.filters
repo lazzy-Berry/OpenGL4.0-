@@ -244,6 +244,12 @@
     <Filter Include="ソース ファイル\chapter8\SeamlessNoise">
       <UniqueIdentifier>{89a814ab-1156-4d9b-8217-6b06a6a5a02f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter8\PaintSpatter">
+      <UniqueIdentifier>{1972a6bb-a27a-4c16-95c7-8694d80f0d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter8\PaintSpatter\Shader">
+      <UniqueIdentifier>{bc29b47e-88d6-4ccd-9163-0209dad2814a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -410,6 +416,9 @@
     </ClCompile>
     <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp">
       <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\PaintSpatter\ScenePaintSpatter.cpp">
+      <Filter>ソース ファイル\chapter8\PaintSpatter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -695,6 +704,12 @@
     <None Include="chapter7\Eao\Shader\EaoShader.vert">
       <Filter>ソース ファイル\chapter7\Eao\Shader</Filter>
     </None>
+    <None Include="chapter8\CloudNoise\Shader\PaintSpatterShader.frag">
+      <Filter>ソース ファイル\chapter8\PaintSpatter\Shader</Filter>
+    </None>
+    <None Include="chapter8\CloudNoise\Shader\PaintSpatterShader.vert">
+      <Filter>ソース ファイル\chapter8\PaintSpatter\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -867,6 +882,9 @@
     </ClInclude>
     <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h">
       <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\PaintSpatter\ScenePaintSpatter.h">
+      <Filter>ソース ファイル\chapter8\PaintSpatter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

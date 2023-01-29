@@ -199,6 +199,7 @@
     <ClCompile Include="chapter7\VBOMesh7.cpp" />
     <ClCompile Include="chapter8\Noise\NoiseTex.cpp" />
     <ClCompile Include="chapter8\Noise\SceneNoiseTex.cpp" />
+    <ClCompile Include="chapter8\PaintSpatter\ScenePaintSpatter.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp" />
     <ClCompile Include="OpenGL.cpp" />
@@ -298,6 +299,8 @@
     <None Include="chapter7\ShadowMap\Shader\ShadowMapShader.vert" />
     <None Include="chapter7\ShadowMap\Shader\SolidShader.frag" />
     <None Include="chapter7\ShadowMap\Shader\SolidShader.vert" />
+    <None Include="chapter8\CloudNoise\Shader\PaintSpatterShader.frag" />
+    <None Include="chapter8\CloudNoise\Shader\PaintSpatterShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp" />
@@ -355,6 +358,7 @@
     <ClInclude Include="chapter7\VBOMesh7.h" />
     <ClInclude Include="chapter8\Noise\NoiseTex.h" />
     <ClInclude Include="chapter8\Noise\SceneNoiseTex.h" />
+    <ClInclude Include="chapter8\PaintSpatter\ScenePaintSpatter.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h" />
   </ItemGroup>

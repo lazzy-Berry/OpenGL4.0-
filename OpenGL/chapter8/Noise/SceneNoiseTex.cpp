@@ -1,7 +1,6 @@
 #include "SceneNoiseTex.h"
 #include "../../chapter2/defines.h"
-#include "NoiseTex.h"
-#include <freeglut.h>
+
 using glm::vec3;
 
 using std::rand;
@@ -20,35 +19,44 @@ using std::time;
 SceneNoiseTex::SceneNoiseTex()
 {
     width = 800;
-    height = 800;
+    height = 600;
 }
 
 void SceneNoiseTex::initScene()
 { 
-    glClearColor(0.0, 0.0, 0.0, 1.0);
-    noiseTex = NoiseTex::generate2DTex(100, 100);
+    glEnable(GL_TEXTURE_2D);
+
+    // 描画範囲の指定
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0.0f, width, 0.0f, height, -1.0f, 1.0f);
+    
+    //テクスチャのロード
+    const char* texName = "chapter8\\Texture\\brick1.jpg";
+    Texture2D texImg(texName, FIF_JPEG);
+    glGenTextures(1, &noiseTex);
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, noiseTex);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texImg.getWidth(), texImg.getHeight(), 0,
+        GL_RGBA, GL_UNSIGNED_BYTE, texImg.getBits());
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+
 }
 
 void SceneNoiseTex::render()
 {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    glOrtho(0.0, WIDTH, HEIGHT, 0.0, -1.0, 1.0);
 
-    glEnable(GL_TEXTURE_2D);//テクスチャ有効
     glBindTexture(GL_TEXTURE_2D, noiseTex);
-    glEnable(GL_ALPHA_TEST);//アルファテスト開始
-    glBegin(GL_POLYGON);
-    glTexCoord2f(0.0f, 0.0f); glVertex2d(10, 1000);//左下
-    glTexCoord2f(0.0f, 1.0f); glVertex2d(10, 10);//左上
-    glTexCoord2f(1.0f, 1.0f); glVertex2d(1000, 10);//右上
-    glTexCoord2f(1.0f, 0.0f); glVertex2d(1000, 1000);//右下
-    glEnd();
-    glDisable(GL_ALPHA_TEST);//アルファテスト終了
-    glDisable(GL_TEXTURE_2D);//テクスチャ無効
 
-    glutSwapBuffers();
+    glBegin(GL_POLYGON);
+    glTexCoord2f(0, 0); glVertex2f(-0.9, -0.9);
+    glTexCoord2f(0, 1); glVertex2f(-0.9, 0.9);
+    glTexCoord2f(1, 1); glVertex2f(0.9, 0.9);
+    glTexCoord2f(1, 0); glVertex2f(0.9, -0.9);
+    glEnd();
+
+    
 }
 
 void SceneNoiseTex::update(float t)
