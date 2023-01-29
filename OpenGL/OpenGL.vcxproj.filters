@@ -241,6 +241,9 @@
     <Filter Include="ソース ファイル\chapter8\Noise">
       <UniqueIdentifier>{dbd00bbc-b47e-4863-afe4-d0c713df47b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter8\SeamlessNoise">
+      <UniqueIdentifier>{89a814ab-1156-4d9b-8217-6b06a6a5a02f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -401,6 +404,12 @@
     </ClCompile>
     <ClCompile Include="chapter8\Noise\SceneNoiseTex.cpp">
       <Filter>ソース ファイル\chapter8\Noise</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.cpp">
+      <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp">
+      <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -852,6 +861,12 @@
     </ClInclude>
     <ClInclude Include="chapter8\Noise\SceneNoiseTex.h">
       <Filter>ソース ファイル\chapter8\Noise</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.h">
+      <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h">
+      <Filter>ソース ファイル\chapter8\SeamlessNoise</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

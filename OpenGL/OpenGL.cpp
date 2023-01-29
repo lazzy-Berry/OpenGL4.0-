@@ -15,9 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter8/Noise/SceneNoiseTex.h"
+#include "chapter8/SeamlessNoise/SceneSeamlessNoiseTex.h"
 
-SceneNoiseTex* scene;
+SceneSeamlessNoiseTex* scene;
 
 void display(void)
 {
@@ -32,7 +32,7 @@ void idle(void)
 void Init() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    scene = new SceneNoiseTex();
+    scene = new SceneSeamlessNoiseTex();
     scene->initScene();
 }
 
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-    glutCreateWindow("libnoiseによるノイズテクスチャの作成");
+    glutCreateWindow("シームレスなノイズテクスチャの作成");
     glutDisplayFunc(display);
     glutIdleFunc(idle);
     Init();

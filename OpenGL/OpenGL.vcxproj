@@ -199,6 +199,8 @@
     <ClCompile Include="chapter7\VBOMesh7.cpp" />
     <ClCompile Include="chapter8\Noise\NoiseTex.cpp" />
     <ClCompile Include="chapter8\Noise\SceneNoiseTex.cpp" />
+    <ClCompile Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.cpp" />
+    <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -353,6 +355,8 @@
     <ClInclude Include="chapter7\VBOMesh7.h" />
     <ClInclude Include="chapter8\Noise\NoiseTex.h" />
     <ClInclude Include="chapter8\Noise\SceneNoiseTex.h" />
+    <ClInclude Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.h" />
+    <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="chapter4\Texture\brick1.jpg" />

@@ -1,9 +1,9 @@
-#include "NoiseTex.h"
+#include "SeamlessNoiseTex.h"
 #include <cstdio>
 #include <noise/noise.h>
 #include <glm/glm.hpp>
 
-int NoiseTex::generate2DTex(bool seamless, float baseFreq, int w, int h)
+int SeamlessNoiseTex::generate2DTex(bool seamless, float baseFreq, int w, int h)
 {
     int width = w;
     int height = h;
@@ -32,8 +32,24 @@ int NoiseTex::generate2DTex(bool seamless, float baseFreq, int w, int h)
                 double z = 0.0;
 
                 float val = 0.0f;
-                val = perlinNoise.GetValue(x, y, z);
+                if (!seamless) {
+                    val = perlinNoise.GetValue(x, y, z);
+                }
+                else {
+                    double a, b, c, d;
 
+                    a = perlinNoise.GetValue(x, y, z);
+                    b = perlinNoise.GetValue(x + xRange, y, z);
+                    c = perlinNoise.GetValue(x, y + yRange, z);
+                    d = perlinNoise.GetValue(x + xRange, y + yRange, z);
+
+                    double xmix = 1.0 - x / xRange;
+                    double ymix = 1.0 - y / yRange;
+                    double x1 = glm::mix(a, b, xmix);
+                    double x2 = glm::mix(c, d, xmix);
+
+                    val = glm::mix(x1, x2, ymix);
+                }
                 val = (val + 1.0f) * 0.5f;
                 val = val > 1.0f ? 1.0f : val;
                 val = val < 0.0f ? 0.0f : val;
