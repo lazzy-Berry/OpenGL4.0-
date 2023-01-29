@@ -250,6 +250,12 @@
     <Filter Include="ソース ファイル\chapter8\PaintSpatter\Shader">
       <UniqueIdentifier>{bc29b47e-88d6-4ccd-9163-0209dad2814a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter8\Decay">
+      <UniqueIdentifier>{ca93fafa-fe17-4ae9-9fa3-1b73e082ba75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter8\Decay\Shader">
+      <UniqueIdentifier>{7f22f90d-6061-4b78-9f7b-3827ff51108e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -419,6 +425,9 @@
     </ClCompile>
     <ClCompile Include="chapter8\PaintSpatter\ScenePaintSpatter.cpp">
       <Filter>ソース ファイル\chapter8\PaintSpatter</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter8\Decay\SceneDecay.cpp">
+      <Filter>ソース ファイル\chapter8\Decay</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -710,6 +719,12 @@
     <None Include="chapter8\CloudNoise\Shader\PaintSpatterShader.vert">
       <Filter>ソース ファイル\chapter8\PaintSpatter\Shader</Filter>
     </None>
+    <None Include="chapter8\Decay\Shader\DecayShader.frag">
+      <Filter>ソース ファイル\chapter8\Decay\Shader</Filter>
+    </None>
+    <None Include="chapter8\Decay\Shader\DecayShader.vert">
+      <Filter>ソース ファイル\chapter8\Decay\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -885,6 +900,9 @@
     </ClInclude>
     <ClInclude Include="chapter8\PaintSpatter\ScenePaintSpatter.h">
       <Filter>ソース ファイル\chapter8\PaintSpatter</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter8\Decay\SceneDecay.h">
+      <Filter>ソース ファイル\chapter8\Decay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

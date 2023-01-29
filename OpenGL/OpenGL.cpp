@@ -15,9 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter8/PaintSpatter/ScenePaintSpatter.h"
+#include "chapter8/Decay/SceneDecay.h"
 
-ScenePaintSpatter* scene;
+SceneDecay* scene;
 
 void display(void)
 {
@@ -33,7 +33,7 @@ void idle(void)
 void Init() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    scene = new ScenePaintSpatter();
+    scene = new SceneDecay();
     scene->initScene();
     scene->resize(320, 320);
 }
@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-    glutCreateWindow("ペイント・スパッター効果の作成");
+    glutCreateWindow("風化効果の作成");
 
     // GLEW初期化
     if (glewInit() != GLEW_OK)
