@@ -277,6 +277,12 @@
     <Filter Include="ソース ファイル\chapter9\Particle\Shader">
       <UniqueIdentifier>{03328be2-b8db-4c19-b954-2a664fcf1bc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter9\ParticlesFeedback">
+      <UniqueIdentifier>{e622328c-ce09-4bc4-a568-d451e4a3eaf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter9\ParticlesFeedback\Shader">
+      <UniqueIdentifier>{6058dfaf-0212-4d91-b8fa-accdc6ee8a55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -458,6 +464,9 @@
     </ClCompile>
     <ClCompile Include="chapter9\Particle\SceneParticle.cpp">
       <Filter>ソース ファイル\chapter9\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.cpp">
+      <Filter>ソース ファイル\chapter9\ParticlesFeedback</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -773,6 +782,12 @@
     <None Include="chapter9\Particle\Shader\ParticleShader.vert">
       <Filter>ソース ファイル\chapter9\Particle\Shader</Filter>
     </None>
+    <None Include="chapter9\ParticlesFeedback\Shader\ParticlesFeedbackShader.frag">
+      <Filter>ソース ファイル\chapter9\ParticlesFeedback\Shader</Filter>
+    </None>
+    <None Include="chapter9\ParticlesFeedback\Shader\ParticlesFeedbackShader.vert">
+      <Filter>ソース ファイル\chapter9\ParticlesFeedback\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -960,6 +975,9 @@
     </ClInclude>
     <ClInclude Include="chapter9\Particle\SceneParticle.h">
       <Filter>ソース ファイル\chapter9\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.h">
+      <Filter>ソース ファイル\chapter9\ParticlesFeedback</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

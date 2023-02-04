@@ -204,6 +204,7 @@
     <ClCompile Include="chapter8\PaintSpatter\ScenePaintSpatter.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.cpp" />
     <ClCompile Include="chapter8\SeamlessNoise\SeamlessNoiseTex.cpp" />
+    <ClCompile Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.cpp" />
     <ClCompile Include="chapter9\Particle\SceneParticle.cpp" />
     <ClCompile Include="chapter9\Wave\SceneWave.cpp" />
     <ClCompile Include="OpenGL.cpp" />
@@ -309,6 +310,8 @@
     <None Include="chapter8\Decay\Shader\DecayShader.vert" />
     <None Include="chapter8\NightVision\Shader\NightVisionShader.frag" />
     <None Include="chapter8\NightVision\Shader\NightVisionShader.vert" />
+    <None Include="chapter9\ParticlesFeedback\Shader\ParticlesFeedbackShader.frag" />
+    <None Include="chapter9\ParticlesFeedback\Shader\ParticlesFeedbackShader.vert" />
     <None Include="chapter9\Particle\Shader\ParticleShader.frag" />
     <None Include="chapter9\Particle\Shader\ParticleShader.vert" />
     <None Include="chapter9\Wave\Shader\WaveShader.frag" />
@@ -375,6 +378,7 @@
     <ClInclude Include="chapter8\PaintSpatter\ScenePaintSpatter.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SceneSeamlessNoiseTex.h" />
     <ClInclude Include="chapter8\SeamlessNoise\SeamlessNoiseTex.h" />
+    <ClInclude Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.h" />
     <ClInclude Include="chapter9\Particle\SceneParticle.h" />
     <ClInclude Include="chapter9\Wave\SceneWave.h" />
   </ItemGroup>
