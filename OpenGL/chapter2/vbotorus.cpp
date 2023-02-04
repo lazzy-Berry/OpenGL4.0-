@@ -72,6 +72,11 @@ void VBOTorus::render() const {
     glDrawElements(GL_TRIANGLES, 6 * faces, GL_UNSIGNED_INT, ((GLubyte*)NULL + (0)));
 }
 
+unsigned int VBOTorus::getVertexArrayHandle() const
+{
+    return vaoHandle;
+}
+
 void VBOTorus::generateVerts(float* verts, float* norms, float* tex,
     unsigned int* el,
     float outerRadius, float innerRadius)

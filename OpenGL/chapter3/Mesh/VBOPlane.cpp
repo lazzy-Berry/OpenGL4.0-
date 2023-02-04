@@ -70,6 +70,8 @@ VBOPlane::VBOPlane(float xsize, float zsize, int xdivs, int zdivs)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, handle[2]);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * xdivs * zdivs * sizeof(unsigned int), el, GL_STATIC_DRAW);
 
+    glBindVertexArray(0);
+
     delete[] v;
     delete[] tex;
     delete[] el;

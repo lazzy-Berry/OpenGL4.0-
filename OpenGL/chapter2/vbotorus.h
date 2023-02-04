@@ -17,6 +17,7 @@ public:
     VBOTorus(float, float, int, int);
 
     void render() const;
+    unsigned int getVertexArrayHandle() const;
 };
 
 #endif // VBOTORUS_H

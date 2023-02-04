@@ -15,9 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter9/ParticlesFeedback/SceneParticlesFeedback.h"
+#include "chapter9/ParticleInstanced/SceneParticleInstanced.h"
 
-SceneParticlesFeedback* scene;
+SceneParticleInstanced* scene;
 
 void display(void)
 {
@@ -32,7 +32,7 @@ void idle(void)
 
 void Init() {
 
-    scene = new SceneParticlesFeedback();
+    scene = new SceneParticleInstanced();
     scene->initScene();
     scene->resize(320, 320);
 }
@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_ACCUM | GLUT_ALPHA);
-    glutCreateWindow("Transformフィードバックシステムを使うパーティクルシステムの作成");
+    glutCreateWindow("インスタンス化パーティクルを使うパーティクルシステムの作成");
 
     // GLEW初期化
     if (glewInit() != GLEW_OK)
