@@ -208,6 +208,7 @@
     <ClCompile Include="chapter9\ParticleInstanced\SceneParticleInstanced.cpp" />
     <ClCompile Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.cpp" />
     <ClCompile Include="chapter9\Particle\SceneParticle.cpp" />
+    <ClCompile Include="chapter9\Smoke\SceneSmoke.cpp" />
     <ClCompile Include="chapter9\Wave\SceneWave.cpp" />
     <ClCompile Include="OpenGL.cpp" />
   </ItemGroup>
@@ -320,6 +321,8 @@
     <None Include="chapter9\ParticlesFeedback\Shader\ParticlesFeedbackShader.vert" />
     <None Include="chapter9\Particle\Shader\ParticleShader.frag" />
     <None Include="chapter9\Particle\Shader\ParticleShader.vert" />
+    <None Include="chapter9\Smoke\Shader\SmokeShader.frag" />
+    <None Include="chapter9\Smoke\Shader\SmokeShader.vert" />
     <None Include="chapter9\Wave\Shader\WaveShader.frag" />
     <None Include="chapter9\Wave\Shader\WaveShader.vert" />
   </ItemGroup>
@@ -388,6 +391,7 @@
     <ClInclude Include="chapter9\ParticleInstanced\SceneParticleInstanced.h" />
     <ClInclude Include="chapter9\ParticlesFeedback\SceneParticlesFeedback.h" />
     <ClInclude Include="chapter9\Particle\SceneParticle.h" />
+    <ClInclude Include="chapter9\Smoke\SceneSmoke.h" />
     <ClInclude Include="chapter9\Wave\SceneWave.h" />
   </ItemGroup>
   <ItemGroup>
