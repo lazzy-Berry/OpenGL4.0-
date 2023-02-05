@@ -289,6 +289,12 @@
     <Filter Include="ソース ファイル\chapter9\ParticleInstanced\Shader">
       <UniqueIdentifier>{725a0c48-fc45-4218-8441-79e3a6754d24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\chapter9\Fire">
+      <UniqueIdentifier>{eb6e6ece-56a3-4cfe-b198-e8723b3dfee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\chapter9\Fire\Shader">
+      <UniqueIdentifier>{815c45d0-a35e-4404-96d0-d2859b498b37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL.cpp">
@@ -476,6 +482,9 @@
     </ClCompile>
     <ClCompile Include="chapter9\ParticleInstanced\SceneParticleInstanced.cpp">
       <Filter>ソース ファイル\chapter9\ParticleInstanced</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter9\Fire\SceneFire.cpp">
+      <Filter>ソース ファイル\chapter9\Fire</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -803,6 +812,12 @@
     <None Include="chapter9\ParticleInstanced\Shader\ParticleInstancedShader.vert">
       <Filter>ソース ファイル\chapter9\ParticleInstanced\Shader</Filter>
     </None>
+    <None Include="chapter9\Fire\Shader\FireShader.frag">
+      <Filter>ソース ファイル\chapter9\Fire\Shader</Filter>
+    </None>
+    <None Include="chapter9\Fire\Shader\FireShader.vert">
+      <Filter>ソース ファイル\chapter9\Fire\Shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter1\GLShader.hpp">
@@ -996,6 +1011,9 @@
     </ClInclude>
     <ClInclude Include="chapter9\ParticleInstanced\SceneParticleInstanced.h">
       <Filter>ソース ファイル\chapter9\ParticleInstanced</Filter>
+    </ClInclude>
+    <ClInclude Include="chapter9\Fire\SceneFire.h">
+      <Filter>ソース ファイル\chapter9\Fire</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

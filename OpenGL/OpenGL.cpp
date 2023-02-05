@@ -15,9 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/transform2.hpp>
 
-#include "chapter9/ParticleInstanced/SceneParticleInstanced.h"
+#include "chapter9/Fire/SceneFire.h"
 
-SceneParticleInstanced* scene;
+SceneFire* scene;
 
 void display(void)
 {
@@ -32,7 +32,7 @@ void idle(void)
 
 void Init() {
 
-    scene = new SceneParticleInstanced();
+    scene = new SceneFire();
     scene->initScene();
     scene->resize(320, 320);
 }
@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(320, 320);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_ACCUM | GLUT_ALPHA);
-    glutCreateWindow("インスタンス化パーティクルを使うパーティクルシステムの作成");
+    glutCreateWindow("パーティクルで火をシュミレートする");
 
     // GLEW初期化
     if (glewInit() != GLEW_OK)
